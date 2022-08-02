@@ -13,7 +13,7 @@ end
 function M.au_indent(lvl)
     s = ""
 	for i, v in ipairs({ "tabstop", "shiftwidth", "softtabstop" }) do
-		s = v .. "=" .. lvl
+		s = s .. v .. "=" .. lvl .. " "
 	end
 	return s
 end
