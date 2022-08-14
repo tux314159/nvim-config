@@ -20,7 +20,6 @@ vim.o.autoindent = true
 
 -- autocmds
 u.ft_autocmd_("html", u.au_indent(2))
-u.ft_autocmd_("html", u.au_indent(2))
 u.ft_autocmd_("javascript", u.au_indent(4))
 u.ft_autocmd_("typescript", u.au_indent(4))
 u.ft_autocmd_("css", u.au_indent(2))
@@ -28,6 +27,7 @@ u.ft_autocmd_("haskell", u.au_indent(2))
 u.ft_autocmd_("rst", u.au_indent(3))
 u.ft_autocmd_("lua", u.au_indent(2))
 u.ft_autocmd_("cs", u.au_indent(4) .. " noexpandtab")
+u.ft_autocmd_("c", u.au_indent(4) .. " noexpandtab")
 -- this special one
 vim.cmd("autocmd BufWritePost ~/.config/nvim/* :silent exec '! (cd ~/.config/nvim/; git add .; git commit -m \"$(date)\"; git push)'")
 -- another special one
