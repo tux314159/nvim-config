@@ -44,5 +44,5 @@ vim.g.coq_settings = {
   display = { ["pum.fast_close"] = false },
   ["display.icons.mode"] = "short",
   auto_start = "shut-up",
-  ["clients.ts.enabled"] = false
+  ["clients.tree_sitter.enabled"] = false
 }
