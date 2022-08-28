@@ -16,12 +16,6 @@ return require('packer').startup(function()
     branch = "coq",
     requires = { "ms-jpq/coq.artifacts" },
     run = { ":COQdeps" },
-    config = function()
-      vim.g.coq_settings = {
-        ["display.icons.mode"] = "short",
-        auto_start = true | "shut-up"
-      }
-    end
   }
   use "neovim/nvim-lspconfig"
   use {
