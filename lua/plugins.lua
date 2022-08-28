@@ -3,7 +3,7 @@ return require('packer').startup(function()
   use {
     "feline-nvim/feline.nvim",
     requires={ "kyazdani42/nvim-web-devicons" },
-    config=function() require('feline').setup() end
+    config=function() require("feline").setup() end
   }
   use "itchyny/vim-haskell-indent"
   use "LionC/nest.nvim"
