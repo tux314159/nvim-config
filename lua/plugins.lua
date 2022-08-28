@@ -7,7 +7,12 @@ return require('packer').startup(function()
   }
   use "itchyny/vim-haskell-indent"
   use "LionC/nest.nvim"
-  use "lewis6991/gitsigns.nvim"
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
   use { "ms-jpq/coq_nvim", branch="coq", requires={ "ms-jpq/coq.artifacts" }, run={ ":COQdeps" } }
   use "neovim/nvim-lspconfig"
   use {
