@@ -18,12 +18,6 @@ vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.autoindent = true
 
--- plugins
-vim.g.coq_settings = {
-  ["display.icons.mode"] = "short",
-  auto_start = "shut-up"
-}
-
 -- autocmds
 u.ft_autocmd_("html", u.au_indent(2))
 u.ft_autocmd_("javascript", u.au_indent(4))
@@ -47,4 +41,8 @@ vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
 --vim.cmd("autocmd FileType text,html,tex :set linebreak")
 --vim.cmd("autocmd FileType text,html,tex " .. wrapmapstr)
 
-vim.g.coq_settings = { display = { ["pum.fast_close"] = false }
+vim.g.coq_settings = {
+  display = { ["pum.fast_close"] = false },
+  ["display.icons.mode"] = "short",
+  auto_start = "shut-up"
+}
