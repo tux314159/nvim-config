@@ -9,7 +9,6 @@ return require('packer').startup(function()
   use "LionC/nest.nvim"
   use {
     "lewis6991/gitsigns.nvim",
-    tag="latest",
     config=function() require("gitsigns").setup() end
   }
   use { "ms-jpq/coq_nvim", branch="coq", requires={ "ms-jpq/coq.artifacts" }, run={ ":COQdeps" } }
