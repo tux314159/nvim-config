@@ -18,7 +18,6 @@ return require('packer').startup(function()
     requires = { "ms-jpq/coq.artifacts" },
     run = { ":COQdeps" },
   }
-  --]]
   use "neovim/nvim-lspconfig"
   use {
     'nvim-telescope/telescope.nvim',
@@ -30,5 +29,6 @@ return require('packer').startup(function()
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
   use "voldikss/vim-floaterm"
+  --]]
   use "wbthomason/packer.nvim"
 end)
