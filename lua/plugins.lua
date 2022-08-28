@@ -20,7 +20,7 @@ return require('packer').startup(function()
       vim.g.coq_settings = {
         display = {
           icons = {
-            mode = short
+            mode = "short"
           }
         }
       }
