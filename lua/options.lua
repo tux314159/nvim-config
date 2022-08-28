@@ -43,5 +43,6 @@ vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
 vim.g.coq_settings = {
   display = { ["pum.fast_close"] = false },
   ["display.icons.mode"] = "short",
-  auto_start = "shut-up"
+  auto_start = "shut-up",
+  ["clients.treesitter.enabled"] = false
 }
