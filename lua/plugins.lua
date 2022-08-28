@@ -23,7 +23,7 @@ return require('packer').startup(function()
     requires={ {'nvim-lua/plenary.nvim'} }
   }
   use { "nvim-treesitter/nvim-treesitter", run=":TSUpdate" }
-  use { "p00f/nvim-ts-rainbow" }
+  use "p00f/nvim-ts-rainbow"
   use "sainnhe/everforest"
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
