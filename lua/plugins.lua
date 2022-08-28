@@ -1,5 +1,4 @@
 return require('packer').startup(function()
-  --[[
   use "EdenEast/nightfox.nvim"
   use {
     "feline-nvim/feline.nvim",
@@ -12,7 +11,6 @@ return require('packer').startup(function()
     "lewis6991/gitsigns.nvim",
     config = function() require("gitsigns").setup() end
   }
-  --[[
   use {
     "ms-jpq/coq_nvim",
     branch = "coq",
@@ -30,6 +28,5 @@ return require('packer').startup(function()
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
   use "voldikss/vim-floaterm"
-  --]]
   use "wbthomason/packer.nvim"
 end)
