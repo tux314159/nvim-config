@@ -47,4 +47,4 @@ vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
 --vim.cmd("autocmd FileType text,html,tex :set linebreak")
 --vim.cmd("autocmd FileType text,html,tex " .. wrapmapstr)
 
-vim.g.coq_settings = { display = { pum = { fast_close = false }}}
+vim.g.coq_settings = { display = { ["pum.fast_close"] = false }
