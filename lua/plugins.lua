@@ -18,7 +18,8 @@ return require('packer').startup(function()
     run = { ":COQdeps" },
     config = function()
       vim.g.coq_settings = {
-        ["display.icons.mode"] = "short"
+        ["display.icons.mode"] = "short",
+        auto_start = true | "shut-up"
       }
     end
   }
