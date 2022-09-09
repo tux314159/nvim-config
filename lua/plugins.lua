@@ -1,6 +1,5 @@
 return require('packer').startup(function()
   use "EdenEast/nightfox.nvim"
-  use "brisbin/vim-syntax-shakespeare"
   use {
     "feline-nvim/feline.nvim",
     requires = { "kyazdani42/nvim-web-devicons" },
@@ -25,6 +24,7 @@ return require('packer').startup(function()
   }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "p00f/nvim-ts-rainbow"
+  use "pbrisbin/vim-syntax-shakespeare"
   use "sainnhe/everforest"
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
