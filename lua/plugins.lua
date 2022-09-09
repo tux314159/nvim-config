@@ -1,5 +1,6 @@
 return require('packer').startup(function()
   use "EdenEast/nightfox.nvim"
+  use "brisbin/vim-syntax-shakespeare"
   use {
     "feline-nvim/feline.nvim",
     requires = { "kyazdani42/nvim-web-devicons" },
