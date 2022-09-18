@@ -5,7 +5,6 @@ return require('packer').startup(function()
     requires = { "kyazdani42/nvim-web-devicons" },
     config = function() require("feline").setup() end
   }
-  use "itchyny/vim-haskell-indent"
   use "LionC/nest.nvim"
   use {
     "lewis6991/gitsigns.nvim",
@@ -22,6 +21,7 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use "neovimhaskell/haskell-vim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "p00f/nvim-ts-rainbow"
   use "pbrisbin/vim-syntax-shakespeare"
