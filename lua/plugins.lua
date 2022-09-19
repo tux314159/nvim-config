@@ -5,7 +5,7 @@ return require('packer').startup(function()
     requires = { "kyazdani42/nvim-web-devicons" },
     config = function() require("feline").setup() end
   }
-  use 'folke/lsp-colors.nvim'
+  use "folke/lsp-colors.nvim"
   use "LionC/nest.nvim"
   use {
     "lewis6991/gitsigns.nvim",
