@@ -33,24 +33,13 @@ vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false 
 vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
 
 -- LSP UI
-local border = {
-      {"🭽", "FloatBorder"},
-      {"▔", "FloatBorder"},
-      {"🭾", "FloatBorder"},
-      {"▕", "FloatBorder"},
-      {"🭿", "FloatBorder"},
-      {"▁", "FloatBorder"},
-      {"🭼", "FloatBorder"},
-      {"▏", "FloatBorder"},
-}
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   opts = opts or {}
-  opts.border = opts.border or border
+  opts.border = "rounded"
   -- put at corner
-  opts.relative = "editor"
+  opts.relative = "win"
   opts.anchor = "NE"
-  opts.row = 0
-  opts.col = 0
+  opts.bufpos = {0, 0}
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
