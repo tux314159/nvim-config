@@ -50,5 +50,7 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   -- put at corner
   opts.relative = "editor"
   opts.anchor = "NE"
+  opts.row = 0
+  opts.col = 0
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
