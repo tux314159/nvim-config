@@ -28,6 +28,7 @@ return require('packer').startup(function()
   use "sainnhe/everforest"
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
+  use "tpope/vim-scriptease"
   use "voldikss/vim-floaterm"
   use "wbthomason/packer.nvim"
 end)
