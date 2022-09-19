@@ -24,6 +24,7 @@ nvim_lsp.rls.setup {
 
 vim.diagnostic.config({
   virtual_text = false,
+  float = { border = "single" },
 })
 vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
 vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
