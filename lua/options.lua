@@ -6,6 +6,7 @@ vim.o.hidden = true
 vim.o.laststatus = 3  -- global statusline!
 vim.o.mouse = "a"
 vim.o.number = true
+vim.o.scrolloff = 5
 vim.o.shortmess = "c"
 vim.o.signcolumn = "yes:2"
 vim.o.splitbelow = true
