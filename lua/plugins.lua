@@ -22,8 +22,8 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  use "nvim-treesitter/nvim-treesitter-context"
+  --use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  --use "nvim-treesitter/nvim-treesitter-context"
   use "p00f/nvim-ts-rainbow"
   use "pbrisbin/vim-syntax-shakespeare"
   use "sainnhe/everforest"
