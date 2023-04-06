@@ -33,7 +33,7 @@ u.ft_autocmd_("c", u.au_indent(4) .. " noexpandtab")
 vim.cmd("autocmd BufWritePost ~/.config/nvim/* :silent exec '! (cd ~/.config/nvim/; git add .; git commit -m \"$(date)\"; git push)'")
 -- another special one
 vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
-
+-- prolog filetype
 vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
 
 -- wrap only at words for text files, long-line handling...
