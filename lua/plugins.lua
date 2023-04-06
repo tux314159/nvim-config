@@ -32,4 +32,5 @@ return require('packer').startup(function()
   use "tpope/vim-scriptease"
   use "voldikss/vim-floaterm"
   use "wbthomason/packer.nvim"
+  use "soli/prolog-vim"
 end)
