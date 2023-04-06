@@ -27,10 +27,10 @@ return require('packer').startup(function()
   use "p00f/nvim-ts-rainbow"
   use "pbrisbin/vim-syntax-shakespeare"
   use "sainnhe/everforest"
+  use "soli/prolog-vim"
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
   use "tpope/vim-scriptease"
   use "voldikss/vim-floaterm"
   use "wbthomason/packer.nvim"
-  use "soli/prolog-vim"
 end)
