@@ -1,6 +1,6 @@
 nvim_lsp = require("lspconfig")
 local coq = require "coq"
-local servers = { "clangd", "pyright", "tsserver", --[["rust_analyzer",--]] "hls", "csharp_ls" }
+local servers = { "clangd", "pyright", "tsserver", "shellcheck", "hls", "csharp_ls" }
 for k, v in pairs(servers) do
 	nvim_lsp[v].setup(
 		coq.lsp_ensure_capabilities({
