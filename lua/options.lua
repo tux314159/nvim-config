@@ -18,6 +18,7 @@ vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.autoindent = true
+vim.o.cinoptions = true
 
 -- autocmds
 u.ft_autocmd_("html", u.au_indent(2))
