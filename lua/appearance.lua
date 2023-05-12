@@ -27,4 +27,3 @@ vim.cmd("hi FloatermBorder guibg=" .. spec.palette.bg1)
 vim.cmd("hi NormalFloat guibg=" .. spec.palette.bg1)
 
 vim.cmd("hi TreesitterContext guibg=" .. spec.palette.bg2)
-require'treesitter-context'.setup({ separator='-' })

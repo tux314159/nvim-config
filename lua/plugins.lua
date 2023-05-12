@@ -23,9 +23,9 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-  --use "nvim-treesitter/nvim-treesitter-context"
   use "p00f/nvim-ts-rainbow"
   use "pbrisbin/vim-syntax-shakespeare"
+  use "petRUShka/vim-sage"
   use "sainnhe/everforest"
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
