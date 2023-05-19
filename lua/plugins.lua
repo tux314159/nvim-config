@@ -25,7 +25,6 @@ return require('packer').startup(function()
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "p00f/nvim-ts-rainbow"
   use "pbrisbin/vim-syntax-shakespeare"
-  use "petRUShka/vim-sage"
   use "sainnhe/everforest"
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
