@@ -1,4 +1,4 @@
-require("plugins")
+--require("plugins")
 require("treesitter")
 require("appearance")
 require("mappings")
