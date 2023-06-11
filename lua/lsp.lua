@@ -1,15 +1,7 @@
 nvim_lsp = require("lspconfig")
-local coq = require "coq"
 local servers = { "clangd", "pyright", "tsserver", "bashls", "hls", "csharp_ls" }
 for k, v in pairs(servers) do
-	nvim_lsp[v].setup(
-		coq.lsp_ensure_capabilities({
-			on_attach = on_attach,
-			flags = {
-				debounce_text_changes = 150,
-			}
-		})
-	)
+	nvim_lsp[v].setup()
 end
 
 nvim_lsp.rls.setup {
