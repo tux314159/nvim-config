@@ -1,6 +1,6 @@
 require("plugins")
 require("treesitter")
 require("appearance")
-require("mappings")
+--require("mappings")
 require("options")
 require("lsp")
