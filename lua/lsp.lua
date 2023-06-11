@@ -1,7 +1,7 @@
 nvim_lsp = require("lspconfig")
 local servers = { "clangd", "pyright", "tsserver", "bashls", "hls", "csharp_ls" }
 for k, v in pairs(servers) do
-	nvim_lsp[v].setup()
+	nvim_lsp[v].setup({})
 end
 
 nvim_lsp.rls.setup {
