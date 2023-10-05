@@ -31,6 +31,8 @@ nest.applyKeymaps {
 			{ "g", "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
 			{ "b", "<cmd>lua require('telescope.builtin').buffers()<cr>" },
 			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
-		}}
+		}},
+    
+    { "cc", "!make" }
 	}}
 }
