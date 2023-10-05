@@ -33,6 +33,6 @@ nest.applyKeymaps {
 			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
 		}},
     
-    { "cc", "<cmd>!make<cr>" }
+    { "cc", "<cmd>!make<cr><esc>" }
 	}}
 }
