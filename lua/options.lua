@@ -1,6 +1,6 @@
 u = require("util")
 
-vim.o.cinoptions = "l1:0"
+vim.o.cinoptions = l1:0
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 1
 vim.o.hidden = true
