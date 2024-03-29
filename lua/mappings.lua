@@ -36,3 +36,6 @@ nest.applyKeymaps {
     { "cc", "<cmd>!make<cr><esc>" }
 	}}
 }
+
+vim.cmd("<expr> j v:count ? 'j' : 'gj'")
+vim.cmd("<expr> k v:count ? 'k' : 'gk'")
