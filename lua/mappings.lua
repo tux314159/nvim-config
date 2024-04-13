@@ -37,5 +37,5 @@ nest.applyKeymaps {
 	}}
 }
 
-vim.cmd("<expr> j v:count ? 'j' : 'gj'")
-vim.cmd("<expr> k v:count ? 'k' : 'gk'")
+vim.cmd("nnoremap <expr> j v:count ? 'j' : 'gj'")
+vim.cmd("nnoremap <expr> k v:count ? 'k' : 'gk'")
