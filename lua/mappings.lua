@@ -39,7 +39,6 @@ nest.applyKeymaps {
   -- weird snippet stuff ig
   { "<expr><Tab>" "vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)' : '<Tab>'", mode="i,s" }
   { "<expr><S-Tab>" "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'", mode="i,s" }
-  }
 }
 
 --vim.cmd("nnoremap <expr> j v:count ? 'j' : 'gj'")
