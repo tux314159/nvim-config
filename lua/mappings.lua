@@ -32,13 +32,13 @@ nest.applyKeymaps {
 			{ "b", "<cmd>lua require('telescope.builtin').buffers()<cr>" },
 			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
 		}},
-    
-    { "cc", "<cmd>!make<cr><esc>" }
-	}}
 
-  -- weird snippet stuff ig
-  { "<expr><Tab>" "vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)' : '<Tab>'", mode="i,s" }
-  { "<expr><S-Tab>" "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'", mode="i,s" }
+		{ "cc", "<cmd>!make<cr><esc>" }
+	}},
+
+	-- weird snippet stuff ig
+	{ "<expr><Tab>", "vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'", mode="is" },
+	{ "<expr><S-Tab>", "vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'", mode="is" }
 }
 
 --vim.cmd("nnoremap <expr> j v:count ? 'j' : 'gj'")
