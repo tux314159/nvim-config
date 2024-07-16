@@ -27,14 +27,15 @@ nest.applyKeymaps {
 		}},
 
 		{ "f", { -- telescope
-			{ "f", "<cmd>lua require('telescope.builtin').find_files()<cr>" },
-			{ "g", "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
-			{ "b", "<cmd>lua require('telescope.builtin').buffers()<cr>" },
-			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
+			{ "f", "<cmd>lua require('telescope.builtin').find_files()<CR>" },
+			{ "g", "<cmd>lua require('telescope.builtin').live_grep()<CR>" },
+			{ "b", "<cmd>lua require('telescope.builtin').buffers()<CR>" },
+			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<CR>" },
 		}},
 
     { "d", { -- degugger
-      { "o", require("dapui").toggle("sidebar") }
+      { "s", "<cmd>require('dapui').toggle('sidebar')<CR>" },
+      { "t", "<cmd>require('dapui').toggle('tray')<CR>" },
     },
 
 		{ "cc", "<cmd>!make<cr><esc>" }
