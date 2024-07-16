@@ -19,7 +19,7 @@ nest.applyKeymaps {
 	{ "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
 
 	{ "<leader>", {
-		{ "l", {  -- lsp
+		{ "l", { -- lsp
 			{ "D", "<cmd>lua vim.lsp.buf.declaration()<CR>" },
 			{ "d", "<cmd>lua vim.lsp.buf.definition()<CR>" },
 			{ "r", "<cmd>lua vim.lsp.buf.rename()<CR>" },
@@ -33,9 +33,12 @@ nest.applyKeymaps {
 			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
 		}},
 
+    { "d", { -- degugger
+      { "o", require("dapui").toggle("sidebar") }
+    },
+
 		{ "cc", "<cmd>!make<cr><esc>" }
 	}},
-
 }
 
 -- weird snippet stuff
