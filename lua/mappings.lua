@@ -34,8 +34,8 @@ nest.applyKeymaps {
 		}},
 
     { "d", { -- degugger
-      { "s", "<cmd>lua require('dapui').toggle('sidebar')<CR>" },
-      { "t", "<cmd>lua require('dapui').toggle('tray')<CR>" },
+      { "s", "<cmd>require('dapui').toggle('sidebar')<CR>" },
+      { "t", "<cmd>require('dapui').toggle('tray')<CR>" },
     }},
 
 		{ "cc", "<cmd>!make<cr><esc>" }
