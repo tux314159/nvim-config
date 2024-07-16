@@ -19,7 +19,7 @@ nest.applyKeymaps {
 	{ "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
 
 	{ "<leader>", {
-		{ "l", { -- lsp
+		{ "l", {  -- lsp
 			{ "D", "<cmd>lua vim.lsp.buf.declaration()<CR>" },
 			{ "d", "<cmd>lua vim.lsp.buf.definition()<CR>" },
 			{ "r", "<cmd>lua vim.lsp.buf.rename()<CR>" },
@@ -27,19 +27,15 @@ nest.applyKeymaps {
 		}},
 
 		{ "f", { -- telescope
-			{ "f", "<cmd>lua require('telescope.builtin').find_files()<CR>" },
-			{ "g", "<cmd>lua require('telescope.builtin').live_grep()<CR>" },
-			{ "b", "<cmd>lua require('telescope.builtin').buffers()<CR>" },
-			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<CR>" },
+			{ "f", "<cmd>lua require('telescope.builtin').find_files()<cr>" },
+			{ "g", "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
+			{ "b", "<cmd>lua require('telescope.builtin').buffers()<cr>" },
+			{ "h", "<cmd>lua require('telescope.builtin').help_tags()<cr>" },
 		}},
-
-    { "d", { -- degugger
-      { "s", "<cmd>lua require('dapui').toggle('sidebar')<CR>" },
-      { "t", "<cmd>lua require('dapui').toggle('tray')<CR>" },
-    }},
 
 		{ "cc", "<cmd>!make<cr><esc>" }
 	}},
+
 }
 
 -- weird snippet stuff

@@ -1,6 +1,5 @@
 return require('packer').startup(function()
   use "EdenEast/nightfox.nvim"
-  use "LionC/nest.nvim"
   use {
     "feline-nvim/feline.nvim",
     requires = { "kyazdani42/nvim-web-devicons" },
@@ -25,6 +24,7 @@ return require('packer').startup(function()
   use "tpope/vim-scriptease"
   use "voldikss/vim-floaterm"
   use "wbthomason/packer.nvim"
+  use "LionC/nest.nvim"
 
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
