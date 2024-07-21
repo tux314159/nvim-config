@@ -23,7 +23,7 @@ return require('packer').startup(function()
   use "tpope/vim-eunuch"
   use "tpope/vim-obsession"
   use "tpope/vim-scriptease"
-  use "voldikss/vim-floaterm"
+  use "voldikss/toggleterm.nvim"
   use "wbthomason/packer.nvim"
   use "LionC/nest.nvim"
 
