@@ -77,14 +77,14 @@ local config = {
     },
 
     {
-      use "hrsh7th/cmp-nvim-lsp"
-      use "hrsh7th/cmp-buffer"
-      use "hrsh7th/cmp-path"
-      use "hrsh7th/cmp-cmdline"
-      use "hrsh7th/nvim-cmp"
-      use "hrsh7th/cmp-vsnip"
-      use "hrsh7th/vim-vsnip"
-    }
+      "hrsh7th/cmp-nvim-lsp"
+    },
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/vim-vsnip",
   },
 
   options = {
