@@ -31,7 +31,8 @@ for _, mod_name in pairs(config_mod_names) do
   -- Load plugins
   if mod.plugins then
     for _, plugin in ipairs(mod.plugins) do
-      packer.use(plugin)
+    print(vim.inspect(plugin))
+      packer.use("folke/tokyonight")
     end
   end
 end
