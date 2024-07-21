@@ -26,7 +26,44 @@ local config = {
           },
         }),
       end
-    }
+    },
+
+    {
+      "neovim/nvim-lspconfig",
+      config = function ()
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+        local nvim_lsp = require("lspconfig")
+        local servers = { "clangd", "pyright", "tsserver", "bashls", "hls", "csharp_ls", "lua_ls" }
+        for _, v in pairs(servers) do
+          nvim_lsp[v].setup({capabilities = capabilities})
+        end
+
+        nvim_lsp.lua_ls.setup {
+          on_init = function(client)
+            local path = client.workspace_folders[1].name
+            if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+              return
+            end
+
+            client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+              runtime = { version = "LuaJIT" },
+              -- Make the server aware of Neovim runtime files
+              workspace = {
+                checkThirdParty = false,
+                library = vim.api.nvim_get_runtime_file("", true)
+              }
+            })
+          end,
+          settings = {
+            Lua = {}
+          }
+}
+
+vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
+vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
+      end
+
   },
 
   options = {
