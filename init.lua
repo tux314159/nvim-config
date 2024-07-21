@@ -1,4 +1,5 @@
 -- Set up packer
+vim.tbl_islist = vim.islist
 local packer = require('packer')
 packer.util = require('packer.util')
 packer.reset()
