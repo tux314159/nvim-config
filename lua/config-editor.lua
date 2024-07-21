@@ -16,21 +16,23 @@ local function autocmd_simple(cond, pattern, callback)
 end
 
 local filetype_indents = {
-  { "html", set_buf_indent_cb(2) },
-  { "javascript", set_buf_indent_cb(4) },
-  { "typescript", set_buf_indent_cb(4) },
-  { "css", set_buf_indent_cb(2) },
-  { "haskell", set_buf_indent_cb(2) },
-  { "rst", set_buf_indent_cb(3) },
-  { "cs", set_buf_indent_cb(4, { et = false }) },
-  { "c", set_buf_indent_cb(4, { et = false }) },
-  { "cpp", set_buf_indent_cb(4, { et = false }) },
-  { "sh", set_buf_indent_cb(4, { et = false }) },
-  { "tex", set_buf_indent_cb(4, { et = false }) },
+  { "lua", { 2 }},
+  { "html", { 2 }},
+  { "javascript", { 4 }},
+  { "typescript", { 4 }},
+  { "css", { 2 }},
+  { "haskell", { 2 }},
+  { "rst", { 3 }},
+  { "cs", { 4, { et = false } }},
+  { "c", { 4, { et = false } }},
+  { "cpp", { 4, { et = false } }},
+  { "sh", { 4, { et = false } }},
+  { "tex", { 4, { et = false } }},
 }
 
-local config = {
-  options = {
+local config = {}
+
+config.options = {
     o = {
       mouse = "a",
       splitbelow = true,
@@ -44,11 +46,11 @@ local config = {
       autoindent = true,
       cinoptions = "l1:0",
     },
-  },
+  }
 
-  autocmds = {
-    autocmd_simple("FileType", "lua", set_buf_indent_cb(2)),
-  },
-}
+config.autocmds = {}
+for _, rule in ipairs(filetype_indents) do
+  config.autocmds[#config.autocmds+1] = autocmd_simple("FileType", rule[1], set_buf_indent_cb(unpack(rule[2])))
+end
 
 return config
