@@ -1,7 +1,7 @@
 local config = {
   plugins = {
     {
-      "LionC/nest.nvim", setup = function ()
+      "LionC/nest.nvim", config = function ()
         require"nest".applyKeymaps {
           { "<Left>", "<C-w>h" },
           { "<Down>", "<C-w>j" },
