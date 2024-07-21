@@ -30,8 +30,7 @@ for _, mod_name in pairs(config_mod_names) do
   -- Load plugins
   if mod.plugins then
     for _, plugin in ipairs(mod.plugins) do
-	    print(plugin)
-      packer.use(plugin)
+      print(packer.use(plugin))
     end
   end
 end
