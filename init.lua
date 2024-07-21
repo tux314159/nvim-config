@@ -4,7 +4,7 @@ packer.init()
 
 -- Load config modules
 --local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
-local config_mod_names = {"plugins", "appearance"}
+local config_mod_names = {"appearance"}
 local config_mods = {}
 for _, mod_name in pairs(config_mod_names) do
   local mod = require(mod_name)
