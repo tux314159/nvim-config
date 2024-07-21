@@ -1,8 +1,8 @@
 --local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
 local config_mod_names = {
   "config-editor",
-  "config-appearance",
   "config-mappings",
+  "config-appearance",
   "config-telescope",
   "config-ide",
 }
