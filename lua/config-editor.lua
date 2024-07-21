@@ -1,8 +1,8 @@
-local function set_buf_indent_cb(n)
+local function set_buf_indent_cb(n, et)
   return function ()
-      vim.opt_local.tabstop = n
-      vim.opt_local.shiftwidth = n
-      vim.opt_local.softtabstop = n
+    vim.opt_local.tabstop = n
+    vim.opt_local.shiftwidth = n
+    vim.opt_local.softtabstop = n
   end
 end
 
@@ -17,11 +17,11 @@ local filetype_indents = {
   { "css", set_buf_indent_cb(2) },
   { "haskell", set_buf_indent_cb(2) },
   { "rst", set_buf_indent_cb(3) },
-  { "cs", set_buf_indent_cb(4) .. " noexpandtab") },
-  { "c", set_buf_indent_cb(4) .. " noexpandtab") },
-  { "cpp", set_buf_indent_cb(4) .. " noexpandtab") },
-  { "sh", set_buf_indent_cb(4) .. " noexpandtab") },
-  { "tex", set_buf_indent_cb(4) .. " noexpandtab") },
+  { "cs", set_buf_indent_cb(4) .. " noexpandtab" },
+  { "c", set_buf_indent_cb(4) .. " noexpandtab" },
+  { "cpp", set_buf_indent_cb(4) .. " noexpandtab" },
+  { "sh", set_buf_indent_cb(4) .. " noexpandtab" },
+  { "tex", set_buf_indent_cb(4) .. " noexpandtab" },
 }
 
 local config = {
