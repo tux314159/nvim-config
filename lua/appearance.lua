@@ -1,7 +1,7 @@
 local config = {
   plugins = {
     {
-      "folke/tokyonight", config = function ()
+      "folke/tokyonight.nvim", config = function ()
         require"tokyonight".setup({
           style = "moon",
           transparent = true,
@@ -11,7 +11,7 @@ local config = {
       end
     },
     {
-      "akinsho/toggleterm", config = function()
+      "akinsho/toggleterm.nvim", config = function()
         require"toggleterm".setup({
           shade_terminals = true,
           direction = "float",
