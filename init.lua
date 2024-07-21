@@ -62,7 +62,7 @@ packer.compile()
 
 -- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
-  group = vim.api.nvim_create_augroup("push_config_on_save"),
+  group = vim.api.nvim_create_augroup("push_config_on_save", {}),
   pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
   callback = function(ev)
     local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
