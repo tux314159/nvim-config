@@ -1,7 +1,7 @@
 local function set_buf_indent(n)
-  vim.opt_local.tabstop = 2
-  vim.opt_local.shiftwidth = 2
-  vim.opt_local.softtabstop = 2
+  vim.opt_local.tabstop = n
+  vim.opt_local.shiftwidth = n
+  vim.opt_local.softtabstop = n
 end
 
 local config = {
@@ -26,11 +26,7 @@ local config = {
       "FileType",
       {
         pattern = "lua",
-        callback = function(_)
-          vim.opt_local.tabstop = 2
-          vim.opt_local.shiftwidth = 2
-          vim.opt_local.softtabstop = 2
-        end,
+        callback = set_buf_indent(2)
       },
     },
   },
