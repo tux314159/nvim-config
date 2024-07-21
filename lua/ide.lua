@@ -64,6 +64,17 @@ vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false
 
 local cmp = require'cmp'
 
+local cmp_window = {
+  border = opts.border or 'rounded',
+  winhighlight = opts.winhighlight or 'Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None',
+  zindex = opts.zindex or 1001,
+  scrolloff = opts.scrolloff or 0,
+  col_offset = opts.col_offset or 0,
+  side_padding = opts.side_padding or 1,
+  scrollbar = opts.scrollbar == nil and true or opts.scrollbar,
+  }
+}
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -71,9 +82,8 @@ cmp.setup({
     end,
   },
   window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
-    winblend = 20,
+     completion = cmp.config.window.,
+     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
