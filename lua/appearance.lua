@@ -5,11 +5,11 @@ local config = {
 
   options = {
     o = {
-      termguicolors = true, 
+      termguicolors = true,
       background = "dark",
       winblend = 20,
     },
-  }
+  },
 
   require("tokyonight").setup({
     style = "moon",
@@ -28,3 +28,6 @@ local config = {
       title_pos = "center",
     },
   })
+}
+
+return config
