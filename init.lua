@@ -5,6 +5,8 @@ packer.reset()
 packer.init()
 packer.use("wbthomason/packer.nvim")
 
+require("options")
+
 -- Load config modules
 --local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
 local config_mod_names = {"appearance"}
