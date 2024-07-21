@@ -1,7 +1,7 @@
 local config = {
   plugins = {
     {
-      "tokyonight", config = function ()
+      "folke/tokyonight", config = function ()
         require"tokyonight".setup({
           style = "moon",
           transparent = true,
@@ -9,7 +9,20 @@ local config = {
         })
         vim.cmd.colorscheme("tokyonight")
       end
-    }
+    },
+    {
+      "akinsho/toggleterm", config = function()
+        require"toggleterm".setup({
+          shade_terminals = true,
+          direction = "float",
+          float_opts = {
+            border = "none",
+            winblend = 20,
+            title_pos = "center",
+          },
+        })
+      end
+    },
   },
 
   options = {
@@ -20,15 +33,5 @@ local config = {
     },
   },
 }
-
-require("toggleterm").setup({
-  shade_terminals = true,
-  direction = "float",
-  float_opts = {
-    border = "none",
-    winblend = 20,
-    title_pos = "center",
-  },
-})
 
 return config

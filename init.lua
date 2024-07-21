@@ -1,6 +1,9 @@
+-- Set up packer
 local packer = require('packer')
 packer.util = require('packer.util')
 packer.init()
+packer.use("wbthomason/packer.nvim")
+packer.compile()
 
 -- Load config modules
 --local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
@@ -31,6 +34,8 @@ for _, mod_name in pairs(config_mod_names) do
     end
   end
 end
+
+packer.compile()
 
 -- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
