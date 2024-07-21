@@ -1,9 +1,13 @@
-local modules = {"plugins", "ide", "appearance", "mappings", "options",}
+local function map(tbl, f)
+    local t = {}
+    for k,v in pairs(tbl) do
+        t[k] = f(v)
+    end
+    return t
+end
 
-
-
-
-
+local config_mods = {"plugins", "ide", "appearance", "mappings", "options"}
+local config_mods_loaded = 
 
 require("plugins")
 require("ide")
