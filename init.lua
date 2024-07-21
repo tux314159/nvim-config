@@ -1,13 +1,9 @@
-local function map(tbl, f)
-    local t = {}
-    for k,v in pairs(tbl) do
-        t[k] = f(v)
-    end
-    return t
-end
 
 local config_mods = {"plugins", "ide", "appearance", "mappings", "options"}
-local config_mods_loaded = 
+local config_mods_loaded = {}
+for mod in config_mods do
+  config_mods_loaded[vim.api.current_dir() .. mod .. ".lua"] = require(config_mods)
+end
 
 require("plugins")
 require("ide")
