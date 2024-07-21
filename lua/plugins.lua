@@ -1,5 +1,6 @@
 return require('packer').startup(function()
   use "folke/tokyonight.vim"
+
   use {
     "feline-nvim/feline.nvim",
     requires = { "kyazdani42/nvim-web-devicons" },
