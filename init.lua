@@ -7,7 +7,8 @@ require("options")
 -- Push config changes on file change
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
-  callback = function(_)
+  callback = function(v)
+  print(vim.inspect(v))
     local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
     vim.system({"git", "add", "."}, with_config_dir):wait()
     vim.system({"git", "commit", "-m", "update config"}, with_config_dir):wait()
