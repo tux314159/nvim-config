@@ -1,3 +1,6 @@
+local function set_buf_indent(n)
+end
+
 local config = {
   options = {
     o = {
