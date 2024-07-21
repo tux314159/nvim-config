@@ -33,7 +33,18 @@ u.ft_autocmd_("c", u.au_indent(4) .. " noexpandtab")
 u.ft_autocmd_("cpp", u.au_indent(4) .. " noexpandtab")
 u.ft_autocmd_("sh", u.au_indent(4) .. " noexpandtab")
 u.ft_autocmd_("tex", u.au_indent(4) .. " noexpandtab")
--- this special one
-vim.cmd("autocmd BufWritePost ~/.config/nvim/* :silent exec '! (cd ~/.config/nvim/; git add .; git commit -m \"$(date)\"; git push)'")
 -- another special one
 vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
+
+-- Push config changes every time
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "~/.config/nvim/*" },
+  callback = function()
+    vim.system({"git", "add", "."}, { cwd = "~/.config/nvim" })
+    if vim.api.nvim_buf_line_count(0) > 500000 then
+      vim.bo.syntax = 'off'
+    end
+  end,
+})
+
+vim.cmd("autocmd BufWritePost ~/.config/nvim/* :silent exec '! (cd ~/.config/nvim/; git add .; git commit -m \"$(date)\"; git push)'")
