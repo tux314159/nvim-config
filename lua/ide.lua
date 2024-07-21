@@ -62,7 +62,7 @@ vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false
 
 -- Completion
 
-local cmp = require'cmp'
+local cmp = require("cmp")
 
 local cmp_window = {
   border = "none",
