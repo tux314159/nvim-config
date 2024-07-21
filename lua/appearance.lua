@@ -1,7 +1,5 @@
 local config = {
-  plugins = {
-    { "tokyonight" }
-  },
+  plugins = {"tokyonight"},
 
   options = {
     o = {
@@ -17,7 +15,7 @@ local config = {
     terminal_colors = true,
   }),
 
-  vim.cmd[[colorscheme tokyonight]]
+  vim.cmd.colorscheme("tokyonight")
 
   require("toggleterm").setup({
     shade_terminals = true,
