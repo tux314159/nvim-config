@@ -32,14 +32,6 @@ nvim_lsp.lua_ls.setup {
 vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
 vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
 
-
--- LSP UI
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-  opts = opts or {}
-  return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
-
 -- Completion
 
 local cmp = require'cmp'
