@@ -1,5 +1,7 @@
 -- Treesitter
 
+local config = {
+  plugins = { "ni
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
 
@@ -105,3 +107,6 @@ cmp.setup.cmdline(':', {
   }),
   matching = { disallow_symbol_nonprefix_matching = false }
 })
+}
+
+return config
