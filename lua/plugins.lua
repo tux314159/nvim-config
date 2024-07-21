@@ -1,5 +1,5 @@
 return require('packer').startup(function()
-  use "folke/tokyonight.vim"
+  use "folke/tokyonight.nvim"
 
   use {
     "feline-nvim/feline.nvim",
