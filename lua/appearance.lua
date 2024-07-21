@@ -1,23 +1,26 @@
-local config = {}
+local config = {
+  options = {
+    o = {
+      termguicolors = true, 
+      background = "dark",
+      winblend = 20,
+    },
+  }
 
-vim.o.termguicolors = true
-vim.o.background = "dark"
-vim.o.winblend = 20
+  require("tokyonight").setup({
+    style = "moon",
+    transparent = true,
+    terminal_colors = true,
+  })
 
-require("tokyonight").setup({
-  style = "moon",
-  transparent = true,
-  terminal_colors = true,
-})
+  vim.cmd[[colorscheme tokyonight]]
 
-vim.cmd[[colorscheme tokyonight]]
-
-require("toggleterm").setup({
-  shade_terminals = true,
-  direction = "float",
-  float_opts = {
-    border = "none",
-    winblend = 20,
-    title_pos = "center",
-  },
-})
+  require("toggleterm").setup({
+    shade_terminals = true,
+    direction = "float",
+    float_opts = {
+      border = "none",
+      winblend = 20,
+      title_pos = "center",
+    },
+  })
