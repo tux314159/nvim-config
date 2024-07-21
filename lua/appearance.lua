@@ -1,4 +1,8 @@
 local config = {
+  plugins = {
+    "tokyonight",
+  },
+
   options = {
     o = {
       termguicolors = true, 
