@@ -116,8 +116,8 @@ local config = {
             { name = 'nvim_lsp' },
             { name = 'vsnip' },
           }, {
-            { name = 'buffer' },
-          })
+              { name = 'buffer' },
+            })
         })
 
         cmp.setup.cmdline(':', {
@@ -125,8 +125,8 @@ local config = {
           sources = cmp.config.sources({
             { name = 'path' }
           }, {
-            { name = 'cmdline' }
-          }),
+              { name = 'cmdline' }
+            }),
           matching = { disallow_symbol_nonprefix_matching = false }
         })
       end
