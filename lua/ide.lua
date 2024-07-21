@@ -1,31 +1,41 @@
 -- Treesitter
 
 local config = {
-  plugins = { "ni
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all",
+  plugins = {
+    {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+      config = function()
+        require'nvim-treesitter.configs'.setup({
+          ensure_installed = "all",
 
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
+          highlight = {
+            enable = true,
+            additional_vim_regex_highlighting = false,
+          },
+
+          --indent = {
+            --enable = true,
+          --},
+
+          rainbow = {
+            enable = true,
+            -- disable = { "jsx", "cpp" },
+            extended_mode = true,
+            max_file_lines = nil,
+          },
+        }),
+      end
+    }
   },
 
-  --indent = {
-    --enable = true,
-  --},
-
-  rainbow = {
-    enable = true,
-    -- disable = { "jsx", "cpp" },
-    extended_mode = true,
-    max_file_lines = nil,
-  }
-}
-
--- Folding
---vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
---vim.opt.foldtext = "v:lua.vim.treesitter.foldtext()"
-vim.opt.foldmethod = "marker"
+  options = {
+    o = {
+      foldmethod = "marker",
+      --foldexpr = "v:lua.vim.treesitter.foldexpr()",
+      --foldtext = "v:lua.vim.treesitter.foldtext()",
+    },
+  },
 
 -- LSP
 
