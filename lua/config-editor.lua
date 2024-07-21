@@ -16,7 +16,8 @@ local config = {
   },
 
   autocmds = {
-    "FileType lua",
+    "FileType",
+    pattern = "lua",
     callback = function(ev)
       vim.o.tabstop = 2
       vim.o.shiftwidth = 2
