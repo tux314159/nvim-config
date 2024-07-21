@@ -22,11 +22,11 @@ local filetype_indents = {
   { "css", set_buf_indent_cb(2) },
   { "haskell", set_buf_indent_cb(2) },
   { "rst", set_buf_indent_cb(3) },
-  { "cs", set_buf_indent_cb(4) .. " noexpandtab" },
-  { "c", set_buf_indent_cb(4) .. " noexpandtab" },
-  { "cpp", set_buf_indent_cb(4) .. " noexpandtab" },
-  { "sh", set_buf_indent_cb(4) .. " noexpandtab" },
-  { "tex", set_buf_indent_cb(4) .. " noexpandtab" },
+  { "cs", set_buf_indent_cb(4, { et = false }) },
+  { "c", set_buf_indent_cb(4, { et = false }) },
+  { "cpp", set_buf_indent_cb(4, { et = false }) },
+  { "sh", set_buf_indent_cb(4, { et = false }) },
+  { "tex", set_buf_indent_cb(4, { et = false }) },
 }
 
 local config = {
