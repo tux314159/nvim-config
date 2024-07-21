@@ -1,7 +1,8 @@
 vim.o.termguicolors = true
+vim.o.background = "ligth"
 
 require("tokyonight").setup({
-  style = "night",
+  style = "moon",
   transparent = true,
 })
 
