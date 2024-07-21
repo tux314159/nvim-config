@@ -1,3 +1,6 @@
+--local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
+local config_mod_names = {"appearance", "mappings", "ide"}
+
 -- Set up packer
 vim.tbl_islist = vim.islist  -- deprecated
 local packer = require('packer')
@@ -9,8 +12,6 @@ packer.use("wbthomason/packer.nvim")
 require("options")
 
 -- Load config modules
---local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
-local config_mod_names = {"appearance", "ide"}
 local config_mods = {}
 for _, mod_name in pairs(config_mod_names) do
   local mod = require(mod_name)
