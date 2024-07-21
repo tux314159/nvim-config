@@ -11,7 +11,7 @@ nest.applyKeymaps {
 	{ "<S-Up>", "<C-w>s<C-w>k" },
 	{ "<S-Right>", "<C-w>v" },
 
-	{ "<C-t>", "<Cmd>FloatermToggle<CR>", mode="tn" },
+	{ "<C-t>", "<Cmd>ToggleTerm<CR>", mode="tn" },
 	{ "<Esc>", "<C-\\><C-n>", mode="t" },
 
 	-- special lsp, not inside leader
