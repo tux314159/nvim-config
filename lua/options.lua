@@ -35,14 +35,3 @@ u.ft_autocmd_("sh", u.au_indent(4) .. " noexpandtab")
 u.ft_autocmd_("tex", u.au_indent(4) .. " noexpandtab")
 -- another special one
 vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
-
--- Push config changes every time
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
-  callback = function(_)
-    local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
-    vim.system({"git", "add", "."}, with_config_dir):wait()
-    vim.system({"git", "commit", "-m", "update config"}, with_config_dir):wait()
-    vim.system({"git", "push"}, with_config_dir)
-  end,
-})
