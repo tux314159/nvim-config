@@ -10,6 +10,20 @@ local function autocmd_simple(cond, pattern, callback)
   return { cond, { pattern = pattern, callback = callback } }
 end
 
+local filetype_indents = {
+  { "html", set_buf_indent_cb(2) },
+  { "javascript", set_buf_indent_cb(4) },
+  { "typescript", set_buf_indent_cb(4) },
+  { "css", set_buf_indent_cb(2) },
+  { "haskell", set_buf_indent_cb(2) },
+  { "rst", set_buf_indent_cb(3) },
+  { "cs", set_buf_indent_cb(4) .. " noexpandtab") },
+  { "c", set_buf_indent_cb(4) .. " noexpandtab") },
+  { "cpp", set_buf_indent_cb(4) .. " noexpandtab") },
+  { "sh", set_buf_indent_cb(4) .. " noexpandtab") },
+  { "tex", set_buf_indent_cb(4) .. " noexpandtab") },
+}
+
 local config = {
   options = {
     o = {
