@@ -11,7 +11,7 @@ end
 
 -- convenience function to construct indentation-setting autocmd fragment
 function M.au_indent(lvl)
-    s = ""
+    local s = ""
 	for i, v in ipairs({ "tabstop", "shiftwidth", "softtabstop" }) do
 		s = s .. v .. "=" .. lvl .. " "
 	end
