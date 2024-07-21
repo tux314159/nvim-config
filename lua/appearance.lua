@@ -1,6 +1,6 @@
 local config = {
   plugins = {
-    "tokyonight",
+    { "tokyonight" }
   },
 
   options = {
@@ -15,7 +15,7 @@ local config = {
     style = "moon",
     transparent = true,
     terminal_colors = true,
-  })
+  }),
 
   vim.cmd[[colorscheme tokyonight]]
 
