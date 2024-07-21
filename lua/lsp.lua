@@ -59,7 +59,6 @@ vim.diagnostic.config({
   virtual_text = false,
   float = {
     scope = "cursor",
-    border = "rounded"
   }
 })
 vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
