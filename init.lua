@@ -1,3 +1,10 @@
+local modules = {"plugins", "ide", "appearance", "mappings", "options",}
+
+
+
+
+
+
 require("plugins")
 require("ide")
 require("appearance")
