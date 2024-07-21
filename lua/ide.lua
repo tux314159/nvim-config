@@ -24,7 +24,7 @@ local config = {
             extended_mode = true,
             max_file_lines = nil,
           },
-        }),
+        })
       end
     },
 
