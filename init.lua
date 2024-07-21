@@ -4,7 +4,6 @@ packer.util = require('packer.util')
 packer.reset()
 packer.init()
 packer.use("wbthomason/packer.nvim")
-packer.compile()
 
 -- Load config modules
 --local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
@@ -31,11 +30,11 @@ for _, mod_name in pairs(config_mod_names) do
   -- Load plugins
   if mod.plugins then
     for _, plugin in ipairs(mod.plugins) do
-    print(vim.inspect(plugin))
       packer.use("folke/tokyonight")
     end
   end
 end
+packer.compile()
 
 -- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
