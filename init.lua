@@ -4,7 +4,7 @@ require("appearance")
 require("mappings")
 require("options")
 
--- Push config changes every time
+-- Push config changes on file change
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
   callback = function(_)
