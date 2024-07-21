@@ -30,12 +30,11 @@ for _, mod_name in pairs(config_mod_names) do
   -- Load plugins
   if mod.plugins then
     for _, plugin in ipairs(mod.plugins) do
-      packer.install(plugin)
+	    print(vim.inspect(plugin))
+      packer.use(plugin)
     end
   end
 end
-
-packer.install()
 
 -- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
