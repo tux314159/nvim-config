@@ -7,6 +7,7 @@ local config = {
           transparent = true,
           terminal_colors = true,
         })
+        vim.cmd.colorscheme("tokyonight")
       end
     }
   },
@@ -18,14 +19,6 @@ local config = {
       winblend = 20,
     },
   },
-
-  require("tokyonight").setup({
-    style = "moon",
-    transparent = true,
-    terminal_colors = true,
-  }),
-
-  vim.cmd.colorscheme("tokyonight"),
 
   require("toggleterm").setup({
     shade_terminals = true,
