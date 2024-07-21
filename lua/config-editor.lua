@@ -3,6 +3,11 @@ local function set_buf_indent_cb(n, et)
     vim.opt_local.tabstop = n
     vim.opt_local.shiftwidth = n
     vim.opt_local.softtabstop = n
+    if et then
+      vim.opt_local.expandtab = true
+    else
+      vim.opt_local.expandtab = false
+    end
   end
 end
 
