@@ -74,7 +74,17 @@ local config = {
         vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
         vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
       end
+    },
 
+    {
+      use "hrsh7th/cmp-nvim-lsp"
+      use "hrsh7th/cmp-buffer"
+      use "hrsh7th/cmp-path"
+      use "hrsh7th/cmp-cmdline"
+      use "hrsh7th/nvim-cmp"
+      use "hrsh7th/cmp-vsnip"
+      use "hrsh7th/vim-vsnip"
+    }
   },
 
   options = {
