@@ -1,5 +1,10 @@
 --local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
-local config_mod_names = {"config-appearance", "config-mappings", "config-ide"}
+local config_mod_names = {
+  "config-appearance",
+  "config-mappings",
+  "config-telescope",
+  "config-ide",
+}
 
 -- Set up packer
 vim.tbl_islist = vim.islist  -- deprecated
