@@ -4,11 +4,12 @@ require("appearance")
 require("mappings")
 require("options")
 
--- Push config changes on file change
+-- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
-  callback = function(v)
-  print(vim.inspect(v))
+  callback = function(ev)
+    local changed = ev.match
+
     local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
     vim.system({"git", "add", "."}, with_config_dir):wait()
     vim.system({"git", "commit", "-m", "update config"}, with_config_dir):wait()
