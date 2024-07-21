@@ -7,17 +7,7 @@ for k, v in pairs(servers) do
 	nvim_lsp[v].setup({capabilities = capabilities})
 end
 
-nvim_lsp.rls.setup {
-  settings = {
-    rust = {
-      unstable_features = true,
-      build_on_save = false,
-      all_features = true,
-    },
-  },
-}
-
-nvim_lsp.lus_ls.setup {
+nvim_lsp.lua_language_serer.setup {
   diagnostics = {
     -- Get the language server to recognize the `vim` global
     globals = { "vim" },
