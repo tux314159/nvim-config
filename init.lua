@@ -15,8 +15,6 @@ packer.reset()
 packer.init()
 packer.use("wbthomason/packer.nvim")  -- manage itself
 
-require("options")
-
 -- Load config modules
 local config_mods = {}
 for _, mod_name in pairs(config_mod_names) do
