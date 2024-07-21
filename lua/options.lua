@@ -1,4 +1,4 @@
-u = require("util")
+local u = require("util")
 
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 1
@@ -40,11 +40,9 @@ vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "~/.config/nvim/*" },
   callback = function()
-    vim.system({"git", "add", "."}, { cwd = "~/.config/nvim" })
-    if vim.api.nvim_buf_line_count(0) > 500000 then
-      vim.bo.syntax = 'off'
-    end
+    local with_config_dir = { cwd = "~/.config/nvim" }
+    vim.system({"git", "add", "."}, with_config_dir)
+    vim.system({"git", "commit", "-m", "update config"}, with_config_dir)
+    vim.system({"git", "push"}, with_config_dir)
   end,
 })
-
-vim.cmd("autocmd BufWritePost ~/.config/nvim/* :silent exec '! (cd ~/.config/nvim/; git add .; git commit -m \"$(date)\"; git push)'")
