@@ -28,9 +28,7 @@ local config = {
   },
 
   autocmds = {
-    {
-      autocmd_simple("FileType", "lua", set_buf_indent_cb(2)),
-    },
+    autocmd_simple("FileType", "lua", set_buf_indent_cb(2)),
   },
 }
 
