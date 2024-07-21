@@ -2,7 +2,7 @@ vim.o.termguicolors = true
 
 require("tokyonight").setup({
   style = "moon",
-  transparent = false,
+  transparent = true,
 })
 
 vim.cmd[[colorscheme tokyonight]]
