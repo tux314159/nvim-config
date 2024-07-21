@@ -44,6 +44,13 @@ for _, mod_name in pairs(config_mod_names) do
     end
   end
 
+  -- Load autocmds
+  if mod.keymaps then
+    for _, km in ipairs(mod.autocmds) do
+      vim.api.nvim_create_autocmd(unpack(km))
+    end
+  end
+
   -- Load plugins
   if mod.plugins then
     for _, plugin in ipairs(mod.plugins) do
@@ -55,6 +62,7 @@ packer.compile()
 
 -- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
+  group = vim.api.nvim_create_augroup("push_config_on_save"),
   pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
   callback = function(ev)
     local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
