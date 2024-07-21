@@ -67,7 +67,7 @@ local cmp = require'cmp'
 local cmp_window = {
   border = "none",
   winblend = 20,
-  zindex = cmp.opts.zindex or 1001,
+  zindex = 1001,
   scrolloff = false,
 }
 
