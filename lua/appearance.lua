@@ -10,4 +10,4 @@ require("tokyonight").setup({
 
 vim.cmd[[colorscheme tokyonight]]
 
-require("toggleterm").setup()
+require("toggleterm").setup(direction = "float")
