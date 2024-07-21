@@ -29,7 +29,7 @@ vim.opt.foldmethod = "marker"
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp = require("lspconfig")
+local nvim_lsp = require("lspconfig")
 local servers = { "clangd", "pyright", "tsserver", "bashls", "hls", "csharp_ls", "lua_ls" }
 for _, v in pairs(servers) do
 	nvim_lsp[v].setup({capabilities = capabilities})
