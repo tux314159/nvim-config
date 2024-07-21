@@ -50,7 +50,9 @@ config.options = {
 
 config.autocmds = {}
 for _, rule in ipairs(filetype_indents) do
-  config.autocmds[#config.autocmds+1] = autocmd_simple("FileType", rule[1], set_buf_indent_cb(unpack(rule[2])))
+  config.autocmds[#config.autocmds+1] = autocmd_simple(
+    "FileType", rule[1], set_buf_indent_cb(unpack(rule[2]))
+  )
 end
 
 return config
