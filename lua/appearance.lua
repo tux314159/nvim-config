@@ -12,7 +12,7 @@ vim.cmd[[colorscheme tokyonight]]
 
 require("toggleterm").setup({
   shade_terminals = false,
-  direction = "float",
+  direction = "vertical",
   winblend = "20",
   highlights = {
     FloatBorder = {},
