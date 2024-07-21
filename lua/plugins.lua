@@ -1,5 +1,6 @@
 return require('packer').startup(function()
   use "folke/tokyonight.nvim"
+  use "folke/lazydev.nvim"
 
   use {
     "feline-nvim/feline.nvim",
