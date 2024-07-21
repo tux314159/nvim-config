@@ -7,7 +7,7 @@ for k, v in pairs(servers) do
 	nvim_lsp[v].setup({capabilities = capabilities})
 end
 
-nvim_lsp.lua_language_serer.setup {
+nvim_lsp.lua_ls.setup {
   diagnostics = {
     -- Get the language server to recognize the `vim` global
     globals = { "vim" },
