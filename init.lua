@@ -2,6 +2,7 @@
 local config_mod_names = {
   "config-appearance",
   "config-mappings",
+  "config-editor",
   "config-telescope",
   "config-ide",
 }
