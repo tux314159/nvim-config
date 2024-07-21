@@ -19,11 +19,33 @@ nvim_lsp.lua_ls.setup {
 }
 
 vim.diagnostic.config({
-  virtual_text = false,
-  float = {
-    scope = "cursor",
+ on_init = function(client)
+    local path = client.workspace_folders[1].name
+    if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+      return
+    end
+
+    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+      runtime = {
+        -- Tell the language server which version of Lua you're using
+        -- (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT'
+      },
+      -- Make the server aware of Neovim runtime files
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME
+        },
+        -- library = vim.api.nvim_get_runtime_file("", true)
+      }
+    })
+  end,
+  settings = {
+    Lua = {}
   }
 })
+
 vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
 vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
 
