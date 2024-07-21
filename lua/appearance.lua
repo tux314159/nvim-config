@@ -11,6 +11,7 @@ require("tokyonight").setup({
 vim.cmd[[colorscheme tokyonight]]
 
 require("toggleterm").setup({
-  direction = "right",
+  shade_terminals = "false",
+  direction = "float",
   winblend = "20",
 })
