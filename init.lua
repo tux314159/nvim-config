@@ -45,7 +45,7 @@ for _, mod_name in pairs(config_mod_names) do
   end
 
   -- Load autocmds
-  if mod.keymaps then
+  if mod.autocmds then
     for _, km in ipairs(mod.autocmds) do
       vim.api.nvim_create_autocmd(unpack(km))
     end
