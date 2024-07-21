@@ -1,8 +1,16 @@
-local config_mod_names = {"plugins", "ide", "appearance", "mappings", "options"}
+local packer = require('packer')
+packer.util = require('packer.util')
+packer.init()
+
+-- Load config modules
+--local config_mod_names = {"plugins", "appearance", "ide", "mappings", "options"}
+local config_mod_names = {"plugins", "appearance"}
 local config_mods = {}
 for _, mod_name in pairs(config_mod_names) do
   local mod = require(mod_name)
   config_mods[mod_name] = mod
+
+  -- Load options
   if mod.options then
     if mod.options.o then
       for k, v in pairs(mod.options.o) do
@@ -13,6 +21,13 @@ for _, mod_name in pairs(config_mod_names) do
       for k, v in pairs(mod.options.g) do
         vim.g[k] = v
       end
+    end
+  end
+
+  -- Load plugins
+  if mod.plugins then
+    for _, plugin in ipairs(mod.plugins) do
+      packer.use(plugin)
     end
   end
 end

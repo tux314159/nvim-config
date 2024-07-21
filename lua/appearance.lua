@@ -1,8 +1,8 @@
 local config = {
   plugins = {
     {
-      "tokyonight", setup = function (tokyonight)
-        tokyonight.setup({
+      "tokyonight", config = function ()
+        require"tokyonight".setup({
           style = "moon",
           transparent = true,
           terminal_colors = true,
