@@ -26,7 +26,7 @@ local config = {
       "FileType",
       {
         pattern = "lua",
-        callback = set_buf_indent(2)
+        callback = set_buf_indent(2),
       },
     },
   },
