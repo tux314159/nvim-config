@@ -38,11 +38,12 @@ vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
 
 -- Push config changes every time
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "~/.config/nvim/*" },
-  callback = function()
-    local with_config_dir = { cwd = "~/.config/nvim" }
-    vim.system({"git", "add", "."}, with_config_dir)
-    vim.system({"git", "commit", "-m", "update config"}, with_config_dir)
+  pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
+  callback = function(ev)
+    print(string.format('event fired: %s', vim.inspect(ev)))
+    local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
+    vim.system({"git", "add", "."}, with_config_dir):wait()
+    vim.system({"git", "commit", "-m", "update config"}, with_config_dir):wait()
     vim.system({"git", "push"}, with_config_dir)
   end,
 })
