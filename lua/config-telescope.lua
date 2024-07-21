@@ -3,9 +3,8 @@ local config = {
     {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
-    }
-  }
-
+    },
+  },
 }
 
 return config
