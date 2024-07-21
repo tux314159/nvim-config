@@ -7,7 +7,7 @@ local config = {
   },
 
   keymaps = {
-    { "n", "lhs", function() print("real lua function") end },
+    { "n", "<leader>ff", function() print("real lua function") end },
   }
 }
 
