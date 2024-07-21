@@ -36,7 +36,6 @@ for _, mod_name in pairs(config_mod_names) do
     end
   end
 end
-packer.update()
 packer.compile()
 
 -- Push config changes on file change, and reload changed files
