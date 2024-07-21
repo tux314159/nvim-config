@@ -36,6 +36,13 @@ for _, mod_name in pairs(config_mod_names) do
     end
   end
 
+  -- Load keymaps
+  if mod.keymaps then
+    for _, km in ipairs(mod.keymaps) do
+      vim.keymap.set(unpack(km))
+    end
+  end
+
   -- Load plugins
   if mod.plugins then
     for _, plugin in ipairs(mod.plugins) do
