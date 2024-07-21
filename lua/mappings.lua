@@ -51,6 +51,4 @@ local config = {
   },
 }
 
-vim.g.mapleader = " "
-
 return config
