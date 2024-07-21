@@ -1,7 +1,9 @@
-local config_mod_names = {"plugins", "ide", "appearance", "mappings", "options"}
+--local config_mod_names = {"plugins", "ide", "appearance", "mappings", "options"}
+local config_mod_names = {"appearance"}
 local config_mods = {}
 for _, mod_name in pairs(config_mod_names) do
   local mod = require(mod_name)
+  config_mods[mod_name] = mod
   if mod.options then
     if mod.o then
       for k, v in mod.o do

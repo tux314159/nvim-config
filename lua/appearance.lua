@@ -19,16 +19,16 @@ local config = {
       winblend = 20,
     },
   },
-
-  require("toggleterm").setup({
-    shade_terminals = true,
-    direction = "float",
-    float_opts = {
-      border = "none",
-      winblend = 20,
-      title_pos = "center",
-    },
-  })
 }
+
+require("toggleterm").setup({
+  shade_terminals = true,
+  direction = "float",
+  float_opts = {
+    border = "none",
+    winblend = 20,
+    title_pos = "center",
+  },
+})
 
 return config
