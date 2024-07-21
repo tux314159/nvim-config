@@ -1,5 +1,5 @@
 -- Set up packer
-vim.tbl_islist = vim.islist
+vim.tbl_islist = vim.islist  -- deprecated
 local packer = require('packer')
 packer.util = require('packer.util')
 packer.reset()
