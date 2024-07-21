@@ -12,7 +12,7 @@ local packer = require('packer')
 packer.util = require('packer.util')
 packer.reset()
 packer.init()
-packer.use("wbthomason/packer.nvim")
+packer.use("wbthomason/packer.nvim")  -- manage itself
 
 require("options")
 
