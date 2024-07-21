@@ -1,7 +1,22 @@
-local config_mods = {"plugins", "ide", "appearance", "mappings", "options"}
-local config_mods_loaded = {}
-for _, mod in pairs(config_mods) do
-  config_mods_loaded[mod] = require(mod)
+local config_mod_names = {"plugins", "ide", "appearance", "mappings", "options"}
+local config_mods = {}
+for _, mod_name in pairs(config_mod_names) do
+  local mod = require(mod_name)
+  if mod.options then
+    if mod.o then
+      for k, v in mod.o do
+        vim.o[k] = v
+      end
+    end
+    if mod.g then
+      for k, v in mod.g do
+        vim.g[k] = v
+      end
+    end
+  end
+end
+
+
 end
 
 -- Push config changes on file change, and reload changed files
