@@ -92,7 +92,7 @@ local config = {
           border = "none",
           winblend = 20,
           zindex = 1001,
-          scrolloff = 0,
+          scrolloff = 1,
         }
 
         cmp.setup({
