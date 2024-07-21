@@ -5,12 +5,12 @@ for _, mod_name in pairs(config_mod_names) do
   local mod = require(mod_name)
   config_mods[mod_name] = mod
   if mod.options then
-    if mod.o then
+    if mod.options.o then
       for k, v in mod.o do
         vim.o[k] = v
       end
     end
-    if mod.g then
+    if mod.options.g then
       for k, v in mod.g do
         vim.g[k] = v
       end
