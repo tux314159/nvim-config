@@ -68,7 +68,7 @@ local cmp_window = {
   border = "none",
   winblend = 20,
   zindex = 1001,
-  scrolloff = false,
+  scrolloff = 0,
 }
 
 cmp.setup({
