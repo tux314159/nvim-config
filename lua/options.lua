@@ -37,8 +37,6 @@ u.ft_autocmd_("tex", u.au_indent(4) .. " noexpandtab")
 vim.cmd("autocmd BufWritePost ~/.config/nvim/* :silent exec '! (cd ~/.config/nvim/; git add .; git commit -m \"$(date)\"; git push)'")
 -- another special one
 vim.cmd("autocmd FileType scheme inoremap <C-l> λ")
--- prolog filetype
-vim.g.filetype_pl = "prolog"
 
 -- wrap only at words for text files, long-line handling...
 --local wrapmapstr = ":nnoremap j gj| :nnoremap k gk| :nnoremap 0 g0| :nnoremap $ g$| :nnoremap ^ g^| :nnoremap A g$a| :vnoremap j gj| :vnoremap k gk| :vnoremap 0 g0| :vnoremap $ g$| :vnoremap ^ g^"
