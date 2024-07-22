@@ -18,7 +18,7 @@ packer.use("wbthomason/packer.nvim")  -- manage itself
 
 local function load_config_modules(modules)
 	for _, mod_name in pairs(modules) do
-		package.loaded[mod_name] = nil  # unload
+		package.loaded[mod_name] = nil  -- unload module first
 		local mod = require(mod_name)
 
 		-- Load options
