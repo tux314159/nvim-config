@@ -1,5 +1,4 @@
 local config = {
-	module_name = "mappings",
   plugins = {
     {
       "LionC/nest.nvim", config = function ()
