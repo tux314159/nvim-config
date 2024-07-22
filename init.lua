@@ -18,8 +18,8 @@ packer.use("wbthomason/packer.nvim")  -- manage itself
 
 local function load_config_modules(modules)
 	for _, mod_name in pairs(modules) do
+		package.loaded[mod_name] = nil
 		local mod = require(mod_name)
-		config_mods[mod_name] = mod
 
 		-- Load options
 		if mod.options then
