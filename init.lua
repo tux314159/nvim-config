@@ -66,6 +66,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	group = vim.api.nvim_create_augroup("push_config_on_save", {}),
 	pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
 	callback = function(ev)
+		load_config_modules(config_mod_names)  -- reload config
 		local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
 		vim.system({"git", "add", "."}, with_config_dir):wait()
 		vim.system({"git", "commit", "-m", "update config"}, with_config_dir):wait()
