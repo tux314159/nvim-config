@@ -17,9 +17,6 @@ packer.use("wbthomason/packer.nvim")  -- manage itself
 -- Load config modules
 
 local function load_config_modules(modules)
-	-- Unload all modules first
-	for i 
-	local config_mods = {}
 	for _, mod_name in pairs(modules) do
 		local mod = require(mod_name)
 		config_mods[mod_name] = mod
@@ -60,8 +57,6 @@ local function load_config_modules(modules)
 		end
 	end
 	packer.compile()
-
-	return config_mods
 end
 
 load_config_modules(config_mod_names)
