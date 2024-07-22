@@ -7,12 +7,14 @@ local config_mod_names = {
 }
 
 -- Set up packer
-vim.tbl_islist = vim.islist  -- deprecated
-local packer = require("packer")
-packer.util = require("packer.util")
-packer.reset()
-packer.init()
-packer.use("wbthomason/packer.nvim")  -- manage itself
+local function packer_setup()
+	vim.tbl_islist = vim.islist  -- deprecated
+	local packer = require("packer")
+	packer.reset()
+	packer.util = require("packer.util")
+	packer.init()
+	packer.use("wbthomason/packer.nvim")  -- manage itself
+end
 
 -- Load config modules
 
@@ -66,6 +68,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	group = vim.api.nvim_create_augroup("push_config_on_save", {}),
 	pattern = { vim.fn.expand("~") .. "/.config/nvim/*" },
 	callback = function(ev)
+		packer_setup()
 		load_config_modules(config_mod_names)  -- reload config
 		local with_config_dir = { cwd = vim.fn.expand("~") ..  "/.config/nvim" }
 		vim.system({"git", "add", "."}, with_config_dir):wait()
