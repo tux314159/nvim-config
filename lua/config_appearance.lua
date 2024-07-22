@@ -4,7 +4,7 @@ local config = {
 			"rebelot/kanagawa.nvim", config = function ()
 				package.loaded.kanagawa = nil
 				require"kanagawa".setup({
-					theme = "dragon",
+					theme = "wave",
 					dimInactive = "true",
 					transparent = true,
 				})
