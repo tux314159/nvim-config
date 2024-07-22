@@ -28,6 +28,11 @@ local config = {
 				})
 			end
 		},
+		{
+			"feline-nvim/feline.nvim",
+			requires = { "kyazdani42/nvim-web-devicons" },
+			config = function() require("feline").setup() end
+		}
 	},
 
 	options = {
