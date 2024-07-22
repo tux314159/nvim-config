@@ -3,7 +3,7 @@ local config = {
     {
       "folke/tokyonight.nvim", config = function ()
         require"tokyonight".setup({
-          style = "day",
+          style = "night",
           transparent = true,
           terminal_colors = true,
         })
