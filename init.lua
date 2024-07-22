@@ -8,8 +8,8 @@ local config_mod_names = {
 
 -- Set up packer
 vim.tbl_islist = vim.islist  -- deprecated
-local packer = require('packer')
-packer.util = require('packer.util')
+local packer = require("packer")
+packer.util = require("packer.util")
 packer.reset()
 packer.init()
 packer.use("wbthomason/packer.nvim")  -- manage itself
