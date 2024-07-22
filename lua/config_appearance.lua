@@ -1,13 +1,13 @@
 local config = {
   plugins = {
     {
-      "folke/tokyonight.nvim", config = function ()
-        require"tokyonight".setup({
+      "rebelot/kanagawa.nvim", config = function ()
+        require"kanagawa".setup({
           style = "night",
           transparent = true,
           terminal_colors = true,
         })
-        vim.cmd.colorscheme("tokyonight")
+        vim.cmd.colorscheme("kanagawa")
       end
     },
     {
