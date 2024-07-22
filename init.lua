@@ -1,9 +1,9 @@
 local config_mod_names = {
-	"config-editor",
-	"config-mappings",
-	"config-appearance",
-	"config-telescope",
-	"config-ide",
+	"config_editor",
+	"config_mappings",
+	"config_appearance",
+	"config_telescope",
+	"config_ide",
 }
 
 -- Set up packer
