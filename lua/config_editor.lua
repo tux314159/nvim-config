@@ -11,7 +11,7 @@ config.options = {
 		--shiftwidth = 4,
 		--tabstop = 4,
 		--expandtab = true,
-		--autoindent = true,
+		autoindent = true,
 		cinoptions = "l1:0",
 	},
 }
