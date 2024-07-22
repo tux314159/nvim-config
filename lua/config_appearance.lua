@@ -32,7 +32,7 @@ local config = {
 
 	options = {
 		o = {
-			termguicolors = true,
+			--termguicolors = true,
 			background = "dark",
 			winblend = 20,
 			cmdheight = 1,
