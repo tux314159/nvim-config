@@ -7,14 +7,15 @@ local config_mod_names = {
 }
 
 -- Set up packer
+local packer = require("packer")
 local function packer_setup()
 	vim.tbl_islist = vim.islist  -- deprecated
-	local packer = require("packer")
 	packer.reset()
 	packer.util = require("packer.util")
 	packer.init()
 	packer.use("wbthomason/packer.nvim")  -- manage itself
 end
+packer_setup()
 
 -- Load config modules
 
