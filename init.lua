@@ -60,6 +60,8 @@ local function load_config_modules(modules)
 	packer.compile()
 end
 
+load_config_modules(config_mod_names)
+
 -- Push config changes on file change, and reload changed files
 vim.api.nvim_create_autocmd("BufWritePost", {
 	group = vim.api.nvim_create_augroup("push_config_on_save", {}),
