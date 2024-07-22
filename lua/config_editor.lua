@@ -57,7 +57,7 @@ for _, rule in ipairs(filetype_indents) do
 end
 
 config.plugins = {
-
+	"tpope/vim-obsession",
 }
 
 return config
