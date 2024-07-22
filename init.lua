@@ -25,7 +25,6 @@ local function load_config_modules(modules)
 		if mod.options then
 			if mod.options.o then
 				for k, v in pairs(mod.options.o) do
-					print(k.."="..v)
 					vim.o[k] = v
 				end
 			end
