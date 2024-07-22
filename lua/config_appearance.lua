@@ -8,7 +8,7 @@ local config = {
 					dimInactive = "true",
 					transparent = true,
 					background = {
-						dark = "dragon",
+						dark = "lotus",
 						light = "lotus"
 					},
 				})
