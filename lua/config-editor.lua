@@ -1,4 +1,4 @@
-local config = {}
+local config = { module_name = "editor" }
 
 config.options = {
 	o = {
