@@ -2,7 +2,7 @@ local config = {
 	plugins = {
 		{
 			"rebelot/kanagawa.nvim", config = function ()
-                package.loaded.kanagawa = nil
+				package.loaded.kanagawa = nil
 				require"kanagawa".setup({
 					transparent = true,
 					theme = "lotus",
