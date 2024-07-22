@@ -4,8 +4,8 @@ local config = {
 			"rebelot/kanagawa.nvim", config = function ()
 				package.loaded.kanagawa = nil
 				require"kanagawa".setup({
-					transparent = true,
 					theme = "wave",
+					transparent = true,
 				})
 				vim.cmd.colorscheme("kanagawa")
 			end
