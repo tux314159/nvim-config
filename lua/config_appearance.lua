@@ -7,7 +7,7 @@ local config = {
 					transparent = true,
 					theme = "wave",
 				})
-				vim.cmd.colorscheme("koehler")
+				vim.cmd.colorscheme("kanagawa")
 			end
 		},
 		{
