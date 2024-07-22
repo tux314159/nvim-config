@@ -7,6 +7,10 @@ local config = {
 					theme = "wave",
 					dimInactive = "true",
 					transparent = true,
+					background = {
+						dark = "wave",
+						light = "lotus"
+					},
 				})
 				vim.cmd.colorscheme("kanagawa")
 			end
