@@ -5,6 +5,7 @@ local config = {
 				package.loaded.kanagawa = nil
 				require"kanagawa".setup({
 					theme = "wave",
+					dimInactie = "true",
 					transparent = true,
 				})
 				vim.cmd.colorscheme("kanagawa")
