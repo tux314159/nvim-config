@@ -13,6 +13,7 @@ config.options = {
 		--expandtab = true,
 		autoindent = true,
 		cinoptions = "l1:0",
+		clipboard = "unnamedplus"
 	},
 }
 
@@ -54,5 +55,9 @@ for _, rule in ipairs(filetype_indents) do
 		"FileType", rule[1], set_buf_indent_cb(unpack(rule[2]))
 	)
 end
+
+config.plugins = {
+
+}
 
 return config
