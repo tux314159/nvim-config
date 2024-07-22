@@ -8,10 +8,10 @@ config.options = {
 		undofile = true,  -- persistent undo
 		updatetime = 300,
 
-		shiftwidth = 4,
-		tabstop = 4,
-		expandtab = true,
-		autoindent = true,
+		--shiftwidth = 4,
+		--tabstop = 4,
+		--expandtab = true,
+		--autoindent = true,
 		cinoptions = "l1:0",
 	},
 }
