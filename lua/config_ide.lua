@@ -139,9 +139,9 @@ local config = {
 
   options = {
     o = {
-      foldmethod = "marker",
-      --foldexpr = "v:lua.vim.treesitter.foldexpr()",
-      --foldtext = "v:lua.vim.treesitter.foldtext()",
+      --foldmethod = "treesitter",
+      foldexpr = "v:lua.vim.treesitter.foldexpr()",
+      foldtext = "v:lua.vim.treesitter.foldtext()",
     },
   },
 }
