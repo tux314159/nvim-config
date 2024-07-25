@@ -10,7 +10,7 @@ local config = {
 						dark = "wave",
 					},
 				})
-				vim.cmd.colorscheme("kanagawa")
+				--vim.cmd.colorscheme("kanagawa")
 			end
 		},
 		{
