@@ -12,6 +12,7 @@ local config = {
 						light = "lotus"
 					},
 				})
+				vim.o.background = "light",
 				vim.cmd.colorscheme("kanagawa")
 			end
 		},
