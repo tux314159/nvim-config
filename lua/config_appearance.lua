@@ -6,8 +6,8 @@ local config = {
 					dimInactive = "true",
 					transparent = true,
 					background = {
-						dark = "wave",
 						light = "lotus",
+						dark = "wave",
 					},
 				})
 				vim.cmd.colorscheme("kanagawa")
@@ -37,7 +37,7 @@ local config = {
 		o = {
 			termguicolors = true,
 			background = "light",
-			--winblend = 20,
+			winblend = 20,
 			cmdheight = 1,
 			number = true,
 			shortmess = "c",
