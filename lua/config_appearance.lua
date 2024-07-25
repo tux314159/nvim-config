@@ -3,15 +3,15 @@ local config = {
 		{
 			"rebelot/kanagawa.nvim", config = function ()
 				package.loaded.kanagawa = nil
+				vim.o.background = "light",
 				require"kanagawa".setup({
-					--dimInactive = "true",
+					dimInactive = "true",
 					transparent = true,
 					background = {
 						dark = "wave",
 						light = "lotus"
 					},
 				})
-				vim.o.background = "light",
 				vim.cmd.colorscheme("kanagawa")
 			end
 		},
