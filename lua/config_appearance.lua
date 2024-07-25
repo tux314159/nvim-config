@@ -2,7 +2,6 @@ local config = {
 	plugins = {
 		{
 			"rebelot/kanagawa.nvim", config = function ()
-				vim.o.background = "light",
 				require"kanagawa".setup({
 					dimInactive = "true",
 					transparent = true,
