@@ -139,7 +139,7 @@ local config = {
 
   options = {
     o = {
-      --foldmethod = "treesitter",
+      foldmethod = "expr",
       foldexpr = "v:lua.vim.treesitter.foldexpr()",
       foldtext = "v:lua.vim.treesitter.foldtext()",
     },
