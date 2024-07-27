@@ -19,7 +19,7 @@ local config = {
 					shade_terminals = true,
 					direction = "float",
 					float_opts = {
-						border = "round",
+						border = "rounded",
 						winblend = 20,
 						title_pos = "center",
 					},
