@@ -40,7 +40,6 @@ local config = {
         local servers = {
           "clangd",
           "pyright",
-          "tsserver",
           "bashls",
           "hls",
           "csharp_ls",
