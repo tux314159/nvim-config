@@ -6,6 +6,9 @@ local config = {
 			"lewis6991/gitsigns.nvim",
 			config = function() require("gitsigns").setup() end
 		},
+		{
+			"neovimhaskell/haskell-vim",
+		},
     {
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
