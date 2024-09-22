@@ -22,7 +22,7 @@ local config = {
           },
 
           indent = {
-            enable = true,
+            enable = false,
           },
 
           modules = {},
