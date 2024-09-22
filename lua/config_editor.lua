@@ -40,7 +40,7 @@ local filetype_indents = {
 	{ "javascript", { 4 }},
 	{ "typescript", { 4 }},
 	{ "css", { 2 }},
-	{ "haskell", { 2 }},
+	{ "haskell", { 2, { et = true }}},
 	{ "rst", { 3 }},
 	{ "cs", { 4, { et = false } }},
 	{ "c", { 4, { et = false } }},
