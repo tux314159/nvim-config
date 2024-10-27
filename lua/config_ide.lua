@@ -49,8 +49,8 @@ local config = {
           "lua_ls"
         }
 				local handlers =  {
-					["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
-					["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
+					["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = "rounded"}),
+					["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = "rounded" }),
 				}
         for _, v in pairs(servers) do
           nvim_lsp[v].setup({capabilities = capabilities})
