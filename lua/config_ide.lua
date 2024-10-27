@@ -49,7 +49,7 @@ local config = {
           "lua_ls"
         }
 				local handlers =  {
-					["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "rounded"}),
+					["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "line"}),
 					["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "rounded" }),
 				}
         for _, v in pairs(servers) do
