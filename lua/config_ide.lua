@@ -77,7 +77,9 @@ local config = {
           end,
           settings = {
             Lua = {}
-          }
+          },
+					capabilities = capabilities,
+					handlers = handlers,
         }
 
         vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
