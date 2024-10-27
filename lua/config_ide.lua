@@ -95,7 +95,7 @@ local config = {
         local cmp = require("cmp")
 
         local cmp_window = {
-          border = "none",
+          border = "rounded",
           winblend = 20,
           zindex = 1001,
           scrolloff = 1,
