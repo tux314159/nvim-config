@@ -81,6 +81,9 @@ local config = {
 					capabilities = capabilities,
 					handlers = handlers,
         }
+				vim.diagnostic.config({
+					virtual_text = false,
+				})
 
         vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float { focusable = false }")
         vim.cmd("autocmd CursorHoldI * lua vim.diagnostic.open_float { focusable = false }")
