@@ -48,6 +48,10 @@ local config = {
           "csharp_ls",
           "lua_ls"
         }
+				local handlers =  {
+					["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
+					["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
+				}
         for _, v in pairs(servers) do
           nvim_lsp[v].setup({capabilities = capabilities})
         end
