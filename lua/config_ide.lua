@@ -53,7 +53,7 @@ local config = {
 					["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "rounded" }),
 				}
         for _, v in pairs(servers) do
-          nvim_lsp[v].setup({capabilities = capabilities})
+          nvim_lsp[v].setup({capabilities = capabilities, handlers = handlers})
         end
 
         nvim_lsp.lua_ls.setup {
