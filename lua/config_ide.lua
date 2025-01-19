@@ -13,6 +13,7 @@ local config = {
 			"akinsho/git-conflict.nvim",
 			config = function()
 				require("git-conflict").setup({})
+				--vim.cmd("GitConflictRefresh")
 			end,
 			refresh
 		},
