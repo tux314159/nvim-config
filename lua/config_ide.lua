@@ -10,8 +10,7 @@ local config = {
 			"neovimhaskell/haskell-vim",
 		},
 		{
-			"akinsho/git-conflict.nvim",
-			config = function() require("git-conflict").setup() end
+			"rhysd/conflict-marker.vim"
 		},
     {
       "nvim-treesitter/nvim-treesitter",
