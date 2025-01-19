@@ -11,7 +11,10 @@ local config = {
 		},
 		{
 			"akinsho/git-conflict.nvim",
-			config = function() require("git-conflict").setup({}) end,
+			config = function()
+				require("git-conflict").setup({})
+			end,
+			refresh
 		},
     {
       "nvim-treesitter/nvim-treesitter",
