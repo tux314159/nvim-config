@@ -9,6 +9,9 @@ local config = {
 		{
 			"neovimhaskell/haskell-vim",
 		},
+		{
+			"akinsho/git-conflict.nvim",
+		},
     {
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
