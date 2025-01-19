@@ -46,7 +46,8 @@ local config = {
           "bashls",
           "hls",
           "csharp_ls",
-          "lua_ls"
+          "lua_ls",
+					"gdscript"
         }
 				local handlers =  {
 					["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}),
