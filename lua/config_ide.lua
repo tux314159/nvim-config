@@ -10,7 +10,7 @@ local config = {
 			"neovimhaskell/haskell-vim",
 		},
 		{
-			"rhysd/conflict-marker.vim"
+			"rhysd/conflict-marker.vim",
 		},
     {
       "nvim-treesitter/nvim-treesitter",
