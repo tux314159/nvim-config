@@ -3,7 +3,7 @@ local config_mod_names = {
 	"config_mappings",
 	"config_appearance",
 	"config_telescope",
-	"config_ide",
+	"config_lsp",
 }
 
 -- Set up packer
