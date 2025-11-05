@@ -1,6 +1,5 @@
 set = require'set'
 
-
 set 'hidden' (true)
 set 'number' (true)
 set 'signcolumn' 'yes'
