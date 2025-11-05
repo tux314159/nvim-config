@@ -1,4 +1,4 @@
-set = require'set'
+sfet = require'set'
 
 set 'hidden' (true)
 set 'number' (true)
