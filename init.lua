@@ -15,7 +15,7 @@ set 'completeopt=longest,menuone'
 vim.keymap.set(
   'i',
   '<CR>',
-  'pumvisible() ? "\<C-y>" : "\<CR>"'
+  [[pumvisible() ? "\<C-y>" : "\<CR>"]]
 )
 
 
