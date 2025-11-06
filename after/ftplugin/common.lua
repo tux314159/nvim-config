@@ -7,6 +7,6 @@ function M.fmt_autocmd()
       vim.lsp.buf.format({ async = false })
     end,
   })
-}
+end
 
 return M
