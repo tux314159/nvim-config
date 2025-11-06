@@ -22,7 +22,7 @@ end
 set_omni_keymap('<CR>', '<C-y>')
 set_omni_keymap('<Esc>', '<C-e>')
 
-vim.keymap.set('i', '<Tab>',
+vim.keymap.set('i', '<C-Space>',
   function() return vim.fn.pumvisible() == 1 and '<C-n>' or '<C-x><C-o>' end,
   { expr = true, silent = true }
 )
