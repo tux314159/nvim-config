@@ -7,6 +7,8 @@ set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
 
+vim.g.netrw_lsitstyle = 3
+
 vim.api.nvim_create_autocmd('CursorMoved', {
   callback = function(_)
     vim.diagnostic.open_float({ scope = 'cursor' })
