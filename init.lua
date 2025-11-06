@@ -7,7 +7,9 @@ set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
 
+-- Cmdline completion
 set 'wildmode' 'full:longest'
+
 set 'completeopt=longest,menuone'
 
 -- File tree
