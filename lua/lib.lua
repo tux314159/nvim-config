@@ -6,6 +6,7 @@ function M.buflocal_autofmt(cmd)
   end
   if cmd then
     fmt = function()
+      vim.cmd 'loadview'
       vim.cmd('%!' .. cmd)
       if vim.v.shell_error ~= 0 then
         vim.cmd 'undo'
