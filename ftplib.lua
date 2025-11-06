@@ -1,6 +1,6 @@
 local M = {}
 
-function M.fmt_autocmd()
+function M.fmt_autocmd(f)
   vim.api.nvim_create_autocmd('BufWritePre', {
     buffer = 0,
     callback = function()
