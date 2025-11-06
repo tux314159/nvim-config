@@ -17,18 +17,7 @@ function set_omni_keymap(k, expr)
 end
   
 set_omni_keymap('<CR>', '<C-y>')
-vim.keymap.set(
-  'i',
-  '<CR>',
-  function() return vim.fn.pumvisible() == 1 and '<C-y>' or '<CR>' end,
-  { expr = true }
-)
-vim.keymap.set(
-  'i',
-  '<Esc>',
-  function() return vim.fn.pumvisible() == 1 and '<C-E>' or '<Esc>' end,
-  { expr = true }
-)
+set_omni_keymap('<Esc>', '<C-e>')
 
 -- File tree
 vim.g.netrw_liststyle = 3
