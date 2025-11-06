@@ -9,7 +9,7 @@ set 'splitright' (true)
 
 -- File tree
 vim.g.netrw_liststyle = 3
-vim.keymap.set('n', '<C-E>', '<Cmd>Lexplore<CR>')
+vim.keymap.set('n', '<C-E>', '<Cmd>Lexplore 25<CR>')
 
 vim.api.nvim_create_autocmd('CursorMoved', {
   callback = function(_)
