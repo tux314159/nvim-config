@@ -7,6 +7,7 @@ set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
 set 'wildmode' 'full:longest'
+set 'completeopt=longest,menuone'
 
 -- File tree
 vim.g.netrw_liststyle = 3
