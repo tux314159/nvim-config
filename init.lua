@@ -12,6 +12,14 @@ set 'wildmode' 'full:longest'
 
 -- Omnicomplete
 set 'completeopt' 'longest,menuone'
+function set_omni_keymap(k, f)
+  vim.keymap.set(
+    'i',
+    k,
+    function() return vim.fn.pumvisible() == 1 and f() or k end,
+    { expr = true }
+  )
+  
 vim.keymap.set(
   'i',
   '<CR>',
