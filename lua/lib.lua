@@ -7,7 +7,9 @@ function M.buflocal_autofmt(cmd)
   if cmd then
     fmt = function()
       vim.cmd('%!' .. cmd)
-      (vim.v.shell_error ~= 0) and vim.cmd 'undo'
+      if vim.v.shell_error ~= 0 then
+        vim.cmd 'undo'
+      end
     end
   end
 
