@@ -7,7 +7,6 @@ set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
 
-
 vim.g.netrw_liststyle = 3
 
 vim.api.nvim_create_autocmd('CursorMoved', {
