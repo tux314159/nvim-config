@@ -4,4 +4,4 @@ set'local' 'expandtab' (true)
 
 lib = require'lib'
 
-lib.fmt_autocmd()
+lib.buflocal_autofmt()
