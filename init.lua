@@ -18,6 +18,12 @@ vim.keymap.set(
   function() return vim.fn.pumvisible() == 1 and '<C-y>' or '<CR>' end,
   { expr = true }
 )
+vim.keymap.set(
+  'i',
+  '<Esc>',
+  function() return vim.fn.pumvisible() == 1 and '<C-E>' or '<Esc>' end,
+  { expr = true }
+)
 
 -- File tree
 vim.g.netrw_liststyle = 3
