@@ -7,7 +7,9 @@ set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
 
+-- File tree
 vim.g.netrw_liststyle = 3
+vim.keymap.set('n', '<C-,>', '<Cmd>BufferLast<CR>')
 
 vim.api.nvim_create_autocmd('CursorMoved', {
   callback = function(_)
