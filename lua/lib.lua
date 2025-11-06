@@ -1,7 +1,7 @@
 local M = {}
 
 function M.buflocal_autofmt(cmd)
-  if not fmt then
+  if not cmd then
     fmt = function()
       vim.lsp.buf.format({ async = false })
     end
