@@ -10,9 +10,10 @@ set 'splitright' (true)
 -- Cmdline completion
 set 'wildmode' 'full:longest'
 
+-- Omnicomplete
 set 'completeopt=longest,menuone'
-
 vim.cmd[[inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]]
+vim.keymap.set('i', 
 
 -- File tree
 vim.g.netrw_liststyle = 3
