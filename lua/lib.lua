@@ -1,6 +1,6 @@
 local M = {}
 
-function M.buflocal_format(fmt)
+function M.buflocal_autofmt(fmt)
   if not fmt then
     fmt = function()
       vim.lsp.buf.format({ async = false })
