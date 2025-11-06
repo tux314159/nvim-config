@@ -15,12 +15,9 @@ set 'completeopt=longest,menuone'
 vim.keymap.set(
   'i',
   '<CR>',
-  function()
-    if vim.fn.pumvisible() == 1then
-      vim.api.nvim_feedkeys('<C-y>', 'i', false)
-    end
-  end
+  'pumvisible() ? "\<C-y>" : "\<CR>"'
 )
+
 
 -- File tree
 vim.g.netrw_liststyle = 3
