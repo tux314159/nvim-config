@@ -12,6 +12,8 @@ set 'wildmode' 'full:longest'
 
 set 'completeopt=longest,menuone'
 
+vim.cmd[[inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]]
+
 -- File tree
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = -50
