@@ -8,7 +8,7 @@ set 'splitbelow' (true)
 set 'splitright' (true)
 
 -- File tree
-vim.g.netrw_liststyle = 1
+vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = -50
 vim.g.netrw_preview = 1
 vim.keymap.set('n', '<C-S-E>', '<Cmd>Lexplore<CR>')
