@@ -6,6 +6,7 @@ function M.fmt_autocmd(fmt)
       vim.lsp.buf.format({ async = false })
     end
   end
+
   vim.api.nvim_create_autocmd('BufWritePre', {
     buffer = 0,
     callback = function()
