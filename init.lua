@@ -19,8 +19,8 @@ vim.keymap.set(
   function()
     if vim.fn.pumvisible() then
      vim.api.nvim_feedkeys('<C-y>', 'i', false)
-   end
- end,
+     end
+   end,
 )
 
 
