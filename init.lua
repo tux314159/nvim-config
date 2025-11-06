@@ -6,6 +6,7 @@ set 'signcolumn' 'yes'
 set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
+
 set 'wildmode' 'full:longest'
 set 'completeopt=longest,menuone'
 
