@@ -2,6 +2,6 @@ set = require'set'
 set'local' 'shiftwidth' (2)
 set'local' 'expandtab' (true)
 
-ftp = require'ftplib'
+lib = require'lib'
 
-ftp.fmt_autocmd()
+lib.fmt_autocmd()
