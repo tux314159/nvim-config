@@ -22,6 +22,11 @@ end
 set_omni_keymap('<CR>', '<C-y>')
 set_omni_keymap('<Esc>', '<C-e>')
 
+vim.keymap.set('i', 'Tab',
+  function() return vim.fn.pumvisible() == 1 and expr or k end,
+  { expr = true, silent = true }
+)
+
 -- File tree
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = -50
