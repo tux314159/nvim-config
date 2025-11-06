@@ -13,7 +13,7 @@ set 'wildmode' 'full:longest'
 -- Omnicomplete
 set 'completeopt' 'longest,menuone'
 function set_omni_keymap(k, expr)
-  vim.keymap.set('i', k, function() return vim.fn.pumvisible() == 1 and expr or k end, { expr = true })
+  vim.keymap.set('i', k, function() return vim.fn.pumvisible() == 1 and expr or k end, { expr = true, silent = true })
 end
   
 set_omni_keymap('<CR>', '<C-y>')
