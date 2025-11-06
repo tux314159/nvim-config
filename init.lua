@@ -15,7 +15,7 @@ set 'completeopt=longest,menuone'
 vim.keymap.set(
   'i',
   '<CR>',
-  [[pumvisible() ? "\<C-y>" : "\<CR>"]]
+  function () return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>" end
 )
 
 
