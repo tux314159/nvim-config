@@ -4,8 +4,8 @@ set 'hidden' (true)
 set 'number' (true)
 set 'signcolumn' 'yes'
 set 'winborder' 'single'
-set 'splitbelow'
-set 'splitright'
+set 'splitbelow' (true)
+set 'splitright' (true)
 
 vim.api.nvim_create_autocmd('CursorMoved', {
   callback = function(_)
