@@ -11,7 +11,7 @@ set 'splitright' (true)
 set 'wildmode' 'full:longest'
 
 -- Omnicomplete
-set 'completeopt=longest,menuone'
+set 'completeopt' 'longest,menuone'
 vim.keymap.set(
   'i',
   '<CR>',
