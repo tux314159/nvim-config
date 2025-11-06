@@ -13,7 +13,7 @@ set 'wildmode' 'full:longest'
 -- Omnicomplete
 set 'completeopt=longest,menuone'
 vim.keymap.set('i', '<CR>',
-  function() return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>" end)
+  function() return vim.fn.pumvisible() == 1 and "<C-y>" or "<C-R>" end)
 
 -- File tree
 vim.g.netrw_liststyle = 3
