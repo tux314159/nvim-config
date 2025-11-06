@@ -13,7 +13,7 @@ set 'wildmode' 'full:longest'
 -- Omnicomplete
 set 'completeopt=longest,menuone'
 vim.cmd[[inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]]
-vim.keymap.set('i', 
+vim.keymap.set('i', '<CR>', function() return vim.fn.pumvisible()
 
 -- File tree
 vim.g.netrw_liststyle = 3
