@@ -9,6 +9,7 @@ set 'splitright' (true)
 
 -- File tree
 vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = -30
 vim.keymap.set('n', '<C-S-E>', '<Cmd>-30Lexplore<CR>')
 
 vim.api.nvim_create_autocmd('CursorMoved', {
