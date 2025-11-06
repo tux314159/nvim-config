@@ -16,12 +16,11 @@ vim.keymap.set(
   'i',
   '<CR>',
   function()
-    if vim.fn.pumvisible() then
+    if vim.fn.pumvisible() == 1then
       vim.api.nvim_feedkeys('<C-y>', 'i', false)
     end
   end
 )
-
 
 -- File tree
 vim.g.netrw_liststyle = 3
