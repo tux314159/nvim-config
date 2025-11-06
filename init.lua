@@ -18,9 +18,9 @@ vim.keymap.set(
   '<CR>',
   function()
     if vim.fn.pumvisible() then
-     vim.api.nvim_feedkeys('<C-y>', 'i', false)
-     end
-   end,
+      vim.api.nvim_feedkeys('<C-y>', 'i', false)
+    end
+  end,
 )
 
 
