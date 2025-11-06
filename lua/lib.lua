@@ -6,6 +6,7 @@ function M.buflocal_autofmt(cmd)
   end
   if cmd then
     fmt = function()
+      vim.cmd('%!' .. cmd)
     end
   end
 
