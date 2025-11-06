@@ -12,11 +12,8 @@ set 'wildmode' 'full:longest'
 
 -- Omnicomplete
 set 'completeopt=longest,menuone'
-vim.keymap.set(
-  'i',
-  '<CR>',
-  function () return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>" end
-)
+vim.keymap.set( 'i', '<CR>',
+  function () return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>" end)
 
 
 -- File tree
