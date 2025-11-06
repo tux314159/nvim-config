@@ -12,7 +12,6 @@ set 'wildmode' 'full:longest'
 
 -- Omnicomplete
 set 'completeopt=longest,menuone'
-vim.cmd[[inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]]
 vim.keymap.set(
   'i',
   '<CR>',
@@ -20,7 +19,7 @@ vim.keymap.set(
     if vim.fn.pumvisible() then
       vim.api.nvim_feedkeys('<C-y>', 'i', false)
     end
-  end,
+  end
 )
 
 
