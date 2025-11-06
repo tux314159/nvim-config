@@ -1,9 +1,11 @@
 local M = {}
 
 function M.buflocal_autofmt(cmd)
-  if not cmd then
+  fmt = function()
+    vim.lsp.buf.format({ async = false })
+  end
+  if cmd then
     fmt = function()
-      vim.lsp.buf.format({ async = false })
     end
   end
 
