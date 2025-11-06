@@ -23,7 +23,6 @@ set_omni_keymap('<CR>', '<C-y>')
 set_omni_keymap('<Esc>', '<C-e>')
 
 vim.keymap.set('i', '<C-Space>', '<C-x><C-o>')
-)
 
 -- File tree
 vim.g.netrw_liststyle = 3
