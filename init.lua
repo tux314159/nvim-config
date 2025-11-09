@@ -39,9 +39,7 @@ vim.api.nvim_create_autocmd('CursorHold', {
   callback = open_diag_float
 })
 vim.api.nvim_create_autocmd('CursorHoldI', {
-  callback = function(_)
-    vim.diagnostic.open_float({ scope = 'cursor' })
-  end,
+  callback = open_diag_float
 })
 
 -- Push config changes on file change
