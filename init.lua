@@ -6,6 +6,7 @@ set 'signcolumn' 'yes'
 set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
+set 'undofile' (true)
 
 -- Cmdline completion
 set 'wildmode' 'full:longest'
