@@ -26,7 +26,7 @@ vim.keymap.set('i', '<C-Space>', '<C-x><C-o>')
 
 -- File tree
 vim.g.netrw_liststyle = 3
-vim.g.netrw_winsize = -50
+vim.g.netrw_winsize = -45
 vim.g.netrw_preview = 1
 vim.keymap.set('n', '<C-S-E>', '<Cmd>Lexplore<CR>')
 

@@ -1,6 +1,6 @@
 {
   "haskell-vim": { "branch": "master", "commit": "f35d02204b4813d1dbe8b0e98cc39701a4b8e15e" },
-  "lazy.nvim": { "branch": "main", "commit": "ed4dc336a73c18da6fea6e1cf7ad6e1b76d281eb" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
   "nvim-lspconfig": { "branch": "master", "commit": "2b52bc2190c8efde2e4de02d829a138666774c7c" },
   "nvim-treesitter": { "branch": "main", "commit": "645f42e85d8665c91a9911c3896afb57d6b8a923" },
   "toggleterm.nvim": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
