@@ -36,9 +36,7 @@ function open_diag_float(_)
   vim.diagnostic.open_float({ scope = 'cursor' })
 end
 vim.api.nvim_create_autocmd('CursorHold', {
-  callback = function(_)
-    vim.diagnostic.open_float({ scope = 'cursor' })
-  end,
+  callback = open_diag_float
 })
 vim.api.nvim_create_autocmd('CursorHoldI', {
   callback = function(_)
