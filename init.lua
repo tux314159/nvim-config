@@ -32,7 +32,12 @@ vim.g.netrw_winsize = -40
 vim.g.netrw_preview = 1
 vim.keymap.set('n', '<C-S-E>', '<Cmd>Lexplore<CR>')
 
-vim.api.nvim_create_autocmd('ICursorHold', {
+vim.api.nvim_create_autocmd('CursorHold', {
+  callback = function(_)
+    vim.diagnostic.open_float({ scope = 'cursor' })
+  end,
+})
+vim.api.nvim_create_autocmd('CursorHoldI', {
   callback = function(_)
     vim.diagnostic.open_float({ scope = 'cursor' })
   end,
