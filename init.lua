@@ -33,7 +33,7 @@ vim.g.netrw_preview = 1
 vim.keymap.set('n', '<C-S-E>', '<Cmd>Lexplore<CR>')
 
 function open_diag_float(_)
-  vim.diagnostic.open_float({ scope = 'cursor' })
+  vim.diagnostic.open_float({ scope = 'cursor', focusable = false })
 end
 vim.api.nvim_create_autocmd('CursorHold', {
   callback = open_diag_float
