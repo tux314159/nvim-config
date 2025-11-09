@@ -7,6 +7,7 @@ set 'winborder' 'single'
 set 'splitbelow' (true)
 set 'splitright' (true)
 set 'undofile' (true)
+set 'updatetime' (300)
 
 -- Cmdline completion
 set 'wildmode' 'full:longest'
