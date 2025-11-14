@@ -1,5 +1,5 @@
 function enable_ts(langs)
-  require'nvim-treesitter'.install { 'haskell', 'c', 'lua' }
+  require'nvim-treesitter'.install(langs)
   for _, l in pairs(langs) do
     vim.api.nvim_create_autocmd('FileType', {
       pattern = { l },
@@ -17,5 +17,5 @@ return {
   lazy = false,
   branch = 'main',
   build = ':TSUpdate',
-  config = function() enable_ts({ 'haskell' }) end
+  config = function() enable_ts({'haskell', 'c', 'lua', 'markdown'}) end
 }
