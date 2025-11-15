@@ -8,6 +8,7 @@ set 'splitbelow' (true)
 set 'splitright' (true)
 set 'undofile' (true)
 set 'updatetime' (300)
+set 'clipboard' 'unnamedplus'
 
 -- Cmdline completion
 set 'wildmode' 'full:longest'
