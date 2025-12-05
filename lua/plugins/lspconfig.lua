@@ -5,7 +5,6 @@ return {
   keys = {
     { '<F2>', vim.lsp.buf.rename },
     { '<C-.>', vim.lsp.buf.code_action },
-    { '<C-]>', vim.lsp.buf.code_action },
   },
   config = function ()
     vim.lsp.config('hls', {
