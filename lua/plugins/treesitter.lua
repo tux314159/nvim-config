@@ -17,5 +17,5 @@ return {
   lazy = false,
   branch = 'main',
   build = ':TSUpdate',
-  config = function() enable_ts({'haskell', 'c', 'lua', 'markdown'}) end
+  config = function() enable_ts({'haskell', 'c', 'lua', 'markdown', 'meson', 'python'}) end
 }
