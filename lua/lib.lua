@@ -1,7 +1,7 @@
 local M = {}
 
 function M.buflocal_autofmt(cmd)
-  if vim.g.no_autofmt then
+  if vim.g.no_autofmt != nil then
     return
   end
   fmt = function()
