@@ -14,10 +14,10 @@ function M.buflocal_autofmt(cmd)
       vim.cmd 'loadview'
     end
   end
-  local fmtgrp = vim.api.nvim_create_augroup('my.lsp.config', { clear = false })
+  local fmtgrp = vim.api.nvim_create_augroup('fmt', { clear = true })
   vim.api.nvim_create_autocmd('BufWritePre', {
     buffer = 0,
-    callback = fmt
+    callback = fmt,
     group = fmtgrp
   })
 end
