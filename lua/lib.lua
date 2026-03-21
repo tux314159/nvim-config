@@ -2,6 +2,7 @@ local M = {}
 
 function M.buflocal_autofmt(cmd)
   if vim.g.no_autofmt then
+
     return
   end
   fmt = function()
