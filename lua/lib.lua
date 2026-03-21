@@ -14,7 +14,7 @@ function M.buflocal_autofmt(cmd)
       vim.cmd 'loadview'
     end
   end
-  local fmtgrp = vim.api.nvim_create_augroup('autoformat', { clear = false })
+  local fmtgrp = vim.api.nvim_create_augroup('autoformat', { clear = true })
   vim.api.nvim_create_autocmd('BufWritePre', {
     buffer = 0,
     callback = fmt,
