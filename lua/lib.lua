@@ -2,8 +2,7 @@ local M = {}
 
 function M.buflocal_autofmt(cmd)
   if vim.g.no_autofmt then
-
-    return
+      return
   end
   fmt = function()
     vim.lsp.buf.format({ async = false })
