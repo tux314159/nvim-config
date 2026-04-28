@@ -18,5 +18,6 @@ return {
     })
     vim.lsp.enable'hls'
     vim.lsp.enable'clangd'
+    vim.lsp.enable'csharp_ls'
   end,
 }
