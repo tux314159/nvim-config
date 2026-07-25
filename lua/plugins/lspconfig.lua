@@ -19,6 +19,6 @@ return {
     vim.lsp.enable'hls'
     vim.lsp.enable'clangd'
     vim.lsp.enable'csharp_ls'
-    vim.lsp.enable'rust-analyzer'
+    vim.lsp.enable'rust_analyzer'
   end,
 }
