@@ -19,8 +19,8 @@ return {
     vim.lsp.enable'clangd'
     vim.lsp.enable'csharp_ls'
     vim.lsp.enable'hls'
+    vim.lsp.enable'pyright'
     vim.lsp.enable'ruff'
     vim.lsp.enable'rust_analyzer'
-    vim.lsp.enable'pyright'
   end,
 }
