@@ -8,6 +8,7 @@ return {
   },
   config = function ()
     vim.lsp.config('hls', {
+       filetypes = { 'haskell', 'lhaskell', 'cabal' },
       settings = {
         hls = {
           plugin = {
