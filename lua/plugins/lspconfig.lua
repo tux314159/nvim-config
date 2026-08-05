@@ -13,7 +13,8 @@ return {
         haskell = {
           plugin = {
             rename = { config = { crossModule = true }}
-          }
+          },
+          cabalFormattingProvider = 'cabal-fmt',
         }
       }
     })
