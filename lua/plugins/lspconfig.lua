@@ -9,7 +9,7 @@ return {
   config = function ()
     vim.lsp.config('hie', {
       settings = {
-        haskell = {
+        hie = {
           plugin = {
             rename = { config = { crossModule = true }}
           }
