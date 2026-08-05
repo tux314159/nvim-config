@@ -7,7 +7,7 @@ return {
     { '<C-.>', vim.lsp.buf.code_action },
   },
   config = function ()
-    vim.lsp.config('hls', {
+    vim.lsp.config('hie', {
       settings = {
         haskell = {
           plugin = {
