@@ -7,7 +7,7 @@ return {
     { '<C-.>', vim.lsp.buf.code_action },
   },
   config = function ()
-    vim.lsp.config('hie', {
+    vim.lsp.config('hls', {
       settings = {
         hie = {
           plugin = {
