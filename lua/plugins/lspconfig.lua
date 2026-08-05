@@ -14,7 +14,7 @@ return {
           plugin = {
             rename = { config = { crossModule = true }}
           },
-          cabalFormattingProvider = 'cabal-fmt',
+          cabalFormattingProvider = 'cabal-fmt'
         }
       }
     })
