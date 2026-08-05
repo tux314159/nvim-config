@@ -9,7 +9,7 @@ return {
   config = function ()
     vim.lsp.config('hls', {
       settings = {
-        hie = {
+        hls = {
           plugin = {
             rename = { config = { crossModule = true }}
           }
